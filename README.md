@@ -10,7 +10,6 @@ Paasho Mobile PWA (v1.0.0)
 * 2 Page modals
 * 2 Components
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbingpiSJ_Pf4E64YZOFjAAqVi9iOVo1QjlKRhrvxWQY29L96TCQ&s" />
-![Image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbingpiSJ_Pf4E64YZOFjAAqVi9iOVo1QjlKRhrvxWQY29L96TCQ&s)
 
 
 <br><br><br><br><br><br><br>
