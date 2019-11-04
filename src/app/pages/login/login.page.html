@@ -1,0 +1,60 @@
+<ion-content padding class="animated fadeIn login auth-page">
+    <div class="theme-bg"></div>
+    <div class="auth-content">
+
+        <!-- Logo -->
+        <div padding-horizontal text-center class="animated fadeInDown">
+            <div class="logo" style="padding-bottom: 120px;"></div>
+            <div></div>
+            <h5 no-margin>
+                <ion-text color="light" class="fw700">
+                    به پاشو خوش آمدید
+                </ion-text>
+            </h5>
+        </div>
+
+        <!-- Login form -->
+        <form [formGroup]="onLoginForm" class="list-form">
+            <ion-item no-padding class="animated fadeInUp">
+                <ion-label position="floating">
+                    <ion-icon name="phone-portrait" item-start></ion-icon>
+                    شماره موبایل
+                </ion-label>
+                <ion-input color="secondary" max=11 [(ngModel)]="mobile.mobile" pattern="tel" type="tel" formControlName="phone"></ion-input>
+            </ion-item>
+
+
+
+            <p ion-text class="text08" *ngIf="onLoginForm.get('phone').touched && onLoginForm.get('phone').hasError('required')">
+                <ion-text color="warning">
+                    شماره موبایل وارد نشده است
+                </ion-text>
+            </p>
+
+
+            <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="sendActivationCode()" tappable>
+                <ion-icon name="log-in"></ion-icon>
+                دریافت کد فعالسازی
+            </ion-button>
+
+
+            <ion-item no-padding class="animated fadeInUp" *ngIf="activateCode">
+                <ion-label position="floating">
+                    <ion-icon name="lock" item-start></ion-icon>
+                    کدفعالسازی
+                </ion-label>
+                <ion-input color="secondary" [(ngModel)]="mobile.code" type="password" formControlName="password"></ion-input>
+
+                <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="confirmCode()" tappable>
+                    <ion-icon name="fitness"></ion-icon>
+                    ورود
+                </ion-button>
+
+            </ion-item>
+
+        </form>
+
+
+
+    </div>
+</ion-content>

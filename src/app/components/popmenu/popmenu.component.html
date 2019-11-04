@@ -1,0 +1,41 @@
+<ion-fab vertical="bottom" horizontal="left" slot="fixed" class="animated fadeInDown" color="light">
+    <ion-fab-button (click)="togglePopupMenu()">
+        <ion-ripple-effect></ion-ripple-effect>
+        <!-- <ion-img src="../../assets/icon/favicon.png"></ion-img> -->
+        <ion-icon src="assets/icon/favicon.svg"></ion-icon>
+        <!--         <ion-icon src="assets/favicon.svg"></ion-icon>
+ -->
+    </ion-fab-button>
+</ion-fab>
+
+<div class="popup-menu">
+
+
+    <div class="popup-menu-overlay" [ngClass]="{'in': openMenu}"></div>
+    <div class="popup-menu-panel" [ngClass]="{'in': openMenu}">
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-button>
+                    <ion-label>رویدادها</ion-label>
+                    <ion-icon name="home"></ion-icon>
+                </ion-button>
+
+            </ion-buttons>
+            <ion-buttons>
+                <ion-button>
+                    <ion-label>نقشه</ion-label>
+                    <ion-icon name="globe"></ion-icon>
+                </ion-button>
+
+            </ion-buttons>
+
+            <ion-buttons slot="end">
+                <ion-button>
+                    <ion-label>پروفایل</ion-label>
+
+                    <ion-icon name="person"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </div>
+</div>

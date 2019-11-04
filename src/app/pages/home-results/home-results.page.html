@@ -1,0 +1,123 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button color="secondary"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <ion-text color="light">
+                <ion-text color="light" class="fw700">Paasho</ion-text>
+            </ion-text>
+        </ion-title>
+    </ion-toolbar>
+    <ion-toolbar color="dark">
+        <ion-searchbar [(ngModel)]="searchKey"></ion-searchbar>
+        <ion-buttons slot="end">
+            <ion-button size="small" shape="round" color="medium" (click)="searchFilter()">
+                <ion-icon name="options"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="getFilteredEvents('TODAY')">
+                <ion-label>امروز</ion-label>
+                <ion-icon name="trending-up"></ion-icon>
+            </ion-button>
+
+        </ion-buttons>
+        <ion-title>
+            <ion-buttons>
+                <ion-button (click)="getFilteredEvents('WEEK')">
+                    <ion-label>این هفته</ion-label>
+                    <ion-icon name="pulse"></ion-icon>
+                </ion-button>
+
+            </ion-buttons>
+        </ion-title>
+
+        <ion-buttons slot="end" (click)="getFilteredEvents('POPULAR')">
+            <ion-button>
+                <ion-label>پربازدید</ion-label>
+
+                <ion-icon name="star"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+
+
+
+</ion-header>
+<!-- <div class="scrollmenu" color="dark">
+    <ion-button *ngFor="let item of  list">
+        <div class="card card-1">
+            <img src="../../../assets/img/Lerning100.jpg">
+            <p style="font-size: 9px;">{{item}}</p>
+        </div>
+
+    </ion-button>
+</div>
+ -->
+<!--     <ion-button shape="round" fill="outline" size="small" color="primary" (click)="alertLocation()">
+        <ion-icon name="locate"></ion-icon>
+        <ion-item *ngFor="let item of  list">
+            <ion-thumbnail slot="start">
+                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            </ion-thumbnail>
+            <ion-label>{{item}}</ion-label>
+        </ion-item>
+
+    </ion-button>
+ -->
+
+
+
+
+
+<ion-content>
+    <ion-list></ion-list>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+
+
+    <ion-card no-margin class="no-radius">
+        <ion-item lines="none" color="medium">
+            <ion-label>
+                <h2 no-margin class="fw500 no-margin">
+                    <ion-text color="dark">Alert / Toast test</ion-text>
+                </h2>
+
+                <p class="text-11x no-margin">
+                    <ion-text color="primary">{{yourLocation}}</ion-text>
+                </p>
+            </ion-label>
+            <ion-button shape="round" fill="outline" size="small" color="primary" (click)="alertLocation()">
+                Location
+                <ion-icon name="locate"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-card>
+
+    <ion-card class="bg-white">
+        <ion-img [src]="themeCover"></ion-img>
+        <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>
+            Modal 1: Modal Image
+        </ion-button>
+    </ion-card>
+
+
+
+
+
+    <ion-tabs class="tabs-positive tabs-icon-top">
+
+    </ion-tabs>
+</ion-content>
+
+<ion-footer>
+</ion-footer>
+<popmenu></popmenu>
