@@ -6,7 +6,7 @@ import {Mobile} from '../../models/Mobile';
 import { HttpResponse, HttpHeaderResponse, HttpEvent } from '@angular/common/http';
 import { HTTPResponse } from '@ionic-native/http/ngx';
 import { map } from 'rxjs/operators';
-import {AuthenticationService} from '../../services/Authentication.service';
+//import {AuthenticationService} from '../../services/authentication.service';
 
 
 @Component({
@@ -28,7 +28,7 @@ export class LoginPage implements OnInit {
     public loadingCtrl: LoadingController,
     private formBuilder: FormBuilder,
     private apiservice: ApiService,
-    private authenticationService: AuthenticationService
+    //private authenticationService: AuthenticationService
   ) {
     this.activateCode = false;
   }
@@ -114,10 +114,9 @@ export class LoginPage implements OnInit {
   confirmCode() {
     this.apiservice.confirmMobile(this.mobile).subscribe((response)  => {
       if (response === 200 ) {
-        console.log('token:' + this.mobile);
+//        console.log('token:' + this.token);
         this.mobile.token = localStorage.getItem('token');
-        this.authenticationService.login(this.mobile);
-        console.log('token:' + this.token);
+       // this.authenticationService.login(this.mobile);
       }
 
     });

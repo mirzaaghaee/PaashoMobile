@@ -6,7 +6,7 @@ import {Mobile} from '../../models/Mobile';
 import { HttpResponse, HttpHeaderResponse, HttpEvent } from '@angular/common/http';
 import { HTTPResponse } from '@ionic-native/http/ngx';
 import { map } from 'rxjs/operators';
-import {AuthenticationService} from '../../services/Authentication.service';
+import {AuthenticationService} from '../../services/authentication.service';
 
 
 @Component({
