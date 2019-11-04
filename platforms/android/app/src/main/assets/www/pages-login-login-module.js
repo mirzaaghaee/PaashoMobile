@@ -63,7 +63,7 @@ var LoginPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-content padding class=\"animated fadeIn login auth-page\">\n  <div class=\"theme-bg\"></div>\n  <div class=\"auth-content\">\n\n    <!-- Logo -->\n    <div padding-horizontal text-center class=\"animated fadeInDown\">\n      <div class=\"logo\"></div>\n      <h4 no-margin>\n        <ion-text color=\"light\" class=\"fw700\">\n          Ionic 4 Start Theme\n        </ion-text>\n      </h4>\n    </div>\n\n    <!-- Login form -->\n    <form [formGroup]=\"onLoginForm\" class=\"list-form\">\n      <ion-item no-padding class=\"animated fadeInUp\">\n        <ion-label position=\"floating\">\n          <ion-icon name=\"mail\" item-start></ion-icon>\n          Email\n        </ion-label>\n        <ion-input color=\"secondary\" type=\"email\" formControlName=\"email\"></ion-input>\n      </ion-item>\n      <p ion-text class=\"text08\" *ngIf=\"onLoginForm.get('email').touched && onLoginForm.get('email').hasError('required')\">\n        <ion-text color=\"warning\">\n          Required Field\n        </ion-text>\n      </p>\n\n      <ion-item no-padding class=\"animated fadeInUp\">\n        <ion-label position=\"floating\">\n          <ion-icon name=\"lock\" item-start></ion-icon>\n          Password\n        </ion-label>\n        <ion-input color=\"secondary\" type=\"password\" formControlName=\"password\"></ion-input>\n      </ion-item>\n      <p ion-text color=\"warning\" class=\"text08\" *ngIf=\"onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')\">\n        <ion-text color=\"warning\">\n          Required Field\n        </ion-text>\n        </p>\n    </form>\n\n    <p text-right tappable (click)=\"forgotPass()\" class=\"paz\">\n      <ion-text color=\"light\">\n        <strong>Forgot Pass?</strong>\n      </ion-text>\n    </p>\n\n    <div>\n      <ion-button icon-left size=\"medium\" expand=\"full\" shape=\"round\" color=\"dark\" (click)=\"goToHome()\" [disabled]=\"!onLoginForm.valid\" tappable>\n        <ion-icon name=\"log-in\"></ion-icon>\n        Signin\n      </ion-button>\n\n      <p text-center>\n        <ion-text color=\"light\">\n          Or Signin with:\n        </ion-text>\n      </p>\n\n      <ion-grid class=\"btn-group\">\n        <ion-row>\n          <ion-col size=\"4\">\n            <ion-button shape=\"round\" expand=\"full\" color=\"secondary\">\n              <ion-icon slot=\"icon-only\" name=\"logo-facebook\"></ion-icon>\n            </ion-button>\n          </ion-col>\n          <ion-col size=\"4\">\n            <ion-button shape=\"round\" expand=\"full\" color=\"secondary\">\n              <ion-icon slot=\"icon-only\" name=\"logo-twitter\"></ion-icon>\n            </ion-button>\n          </ion-col>\n          <ion-col size=\"4\">\n            <ion-button shape=\"round\" expand=\"full\" color=\"secondary\">\n              <ion-icon slot=\"icon-only\" name=\"logo-googleplus\"></ion-icon>\n            </ion-button>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n    </div>\n\n    <!-- Other links -->\n    <div text-center margin-top>\n      <span (click)=\"goToRegister()\" class=\"paz\" tappable>\n        <ion-text color=\"light\">\n          New here? <strong>Sign Up</strong>\n        </ion-text>\n      </span>\n    </div>\n\n  </div>\n</ion-content>"
+module.exports = "<ion-content padding class=\"animated fadeIn login auth-page\">\n    <div class=\"theme-bg\"></div>\n    <div class=\"auth-content\">\n\n        <!-- Logo -->\n        <div padding-horizontal text-center class=\"animated fadeInDown\">\n            <div class=\"logo\" style=\"padding-bottom: 120px;\"></div>\n            <div></div>\n            <h5 no-margin>\n                <ion-text color=\"light\" class=\"fw700\">\n                    به پاشو خوش آمدید\n                </ion-text>\n            </h5>\n        </div>\n\n        <!-- Login form -->\n        <form [formGroup]=\"onLoginForm\" class=\"list-form\">\n            <ion-item no-padding class=\"animated fadeInUp\">\n                <ion-label position=\"floating\">\n                    <ion-icon name=\"phone-portrait\" item-start></ion-icon>\n                    شماره موبایل\n                </ion-label>\n                <ion-input color=\"secondary\" max=11 [(ngModel)]=\"mobile.mobile\" pattern=\"tel\" type=\"tel\" formControlName=\"phone\"></ion-input>\n            </ion-item>\n\n\n\n            <p ion-text class=\"text08\" *ngIf=\"onLoginForm.get('phone').touched && onLoginForm.get('phone').hasError('required')\">\n                <ion-text color=\"warning\">\n                    شماره موبایل وارد نشده است\n                </ion-text>\n            </p>\n\n\n            <ion-button icon-left size=\"medium\" expand=\"full\" shape=\"round\" color=\"dark\" (click)=\"sendActivationCode()\" tappable>\n                <ion-icon name=\"log-in\"></ion-icon>\n                دریافت کد فعالسازی\n            </ion-button>\n\n\n            <ion-item no-padding class=\"animated fadeInUp\" *ngIf=\"activateCode\">\n                <ion-label position=\"floating\">\n                    <ion-icon name=\"lock\" item-start></ion-icon>\n                    کدفعالسازی\n                </ion-label>\n                <ion-input color=\"secondary\" [(ngModel)]=\"mobile.code\" type=\"password\" formControlName=\"password\"></ion-input>\n\n                <ion-button icon-left size=\"medium\" expand=\"full\" shape=\"round\" color=\"dark\" (click)=\"confirmCode()\" tappable>\n                    <ion-icon name=\"fitness\"></ion-icon>\n                    ورود\n                </ion-button>\n\n            </ion-item>\n\n        </form>\n\n\n\n    </div>\n</ion-content>"
 
 /***/ }),
 
@@ -91,6 +91,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/api.service */ "./src/app/services/api.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -138,21 +139,25 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
 var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, menuCtrl, toastCtrl, alertCtrl, loadingCtrl, formBuilder) {
+    function LoginPage(navCtrl, menuCtrl, toastCtrl, alertCtrl, loadingCtrl, formBuilder, apiservice) {
         this.navCtrl = navCtrl;
         this.menuCtrl = menuCtrl;
         this.toastCtrl = toastCtrl;
         this.alertCtrl = alertCtrl;
         this.loadingCtrl = loadingCtrl;
         this.formBuilder = formBuilder;
+        this.apiservice = apiservice;
+        this.mobile = { mobile: '', code: '' };
+        this.activateCode = false;
     }
     LoginPage.prototype.ionViewWillEnter = function () {
         this.menuCtrl.enable(false);
     };
     LoginPage.prototype.ngOnInit = function () {
         this.onLoginForm = this.formBuilder.group({
-            'email': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].compose([
+            'phone': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].compose([
                     _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required
                 ])],
             'password': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].compose([
@@ -236,7 +241,26 @@ var LoginPage = /** @class */ (function () {
         this.navCtrl.navigateRoot('/register');
     };
     LoginPage.prototype.goToHome = function () {
+        console.log('navigating root');
         this.navCtrl.navigateRoot('/home-results');
+    };
+    LoginPage.prototype.sendActivationCode = function () {
+        var _this = this;
+        this.apiservice.sendMobileNumber(this.mobile).subscribe(function (response) {
+            console.log(response);
+            _this.activateCode = true;
+        });
+    };
+    LoginPage.prototype.confirmCode = function () {
+        var _this = this;
+        console.log(this.mobile.code);
+        this.apiservice.confirmMobile(this.mobile).subscribe(function (response) {
+            console.log(response.status);
+            _this.goToHome();
+            if ((response.status === 200)) {
+                _this.goToHome();
+            }
+        });
     };
     LoginPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -249,7 +273,8 @@ var LoginPage = /** @class */ (function () {
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
+            _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])
     ], LoginPage);
     return LoginPage;
 }());

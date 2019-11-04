@@ -27,6 +27,9 @@
     },
     "cordova-plugin-advanced-http": {
       "PACKAGE_NAME": "com.ionictheme.ionic4start"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.Paasho"
     }
   },
   "dependent_plugins": {

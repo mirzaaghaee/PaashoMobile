@@ -936,7 +936,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu>\n      <ion-header>\n        <ion-toolbar color=\"dark\" class=\"user-profile\">\n\n          <ion-item margin-bottom>\n            <ion-avatar slot=\"start\" class=\"user-avatar\">\n              <img src=\"assets/img/avatar.jpeg\">\n            </ion-avatar>\n            <ion-label>\n              <ion-text color=\"medium\">\n                <h1><strong>João Firmino</strong></h1>\n              </ion-text>\n              <ion-text color=\"secondary\">\n                <h3>\n                  São Paulo, Brazil\n                </h3>\n              </ion-text>\n              <ion-menu-toggle class=\"mto\" auto-hide=\"false\">\n                <a class=\"text08\" tappable (click)=\"goToEditProgile()\">\n                  <ion-text color=\"medium\">\n                    <ion-icon name=\"contact\"></ion-icon>\n                    <strong>edit profile</strong>\n                  </ion-text>\n                </a> <ion-text color=\"secondary\"> | </ion-text> \n                <a class=\"text08\" tappable (click)=\"logout()\">\n                  <ion-text color=\"medium\">\n                    <ion-icon name=\"log-out\"></ion-icon>\n                    <strong>logout</strong>\n                  </ion-text>\n                </a>\n              </ion-menu-toggle>\n            </ion-label>\n          </ion-item>\n\n        </ion-toolbar>\n      </ion-header>\n\n      <ion-content class=\"bg-profile\">\n        <ion-list>\n          <ion-list-header color=\"dark\">\n            <ion-label>Menu</ion-label>\n          </ion-list-header>\n\n          <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n            <ion-item [routerLink]=\"[p.url]\" color=\"primary\">\n              <ion-icon slot=\"start\" [name]=\"p.icon\" color=\"light\"></ion-icon>\n              <ion-label>\n                {{p.title}}\n              </ion-label>\n            </ion-item>\n          </ion-menu-toggle>\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>\n"
+module.exports = "<ion-app>\n\n    <ion-split-pane>\n        <ion-menu>\n            <ion-header>\n                <ion-toolbar color=\"dark\" class=\"user-profile\">\n\n                    <ion-item margin-bottom>\n                        <ion-avatar slot=\"start\" class=\"user-avatar\">\n                            <img src=\"assets/img/avatar.jpeg\">\n                        </ion-avatar>\n                        <ion-label>\n                            <ion-text color=\"medium\">\n                                <h1><strong>João Firmino</strong></h1>\n                            </ion-text>\n                            <ion-text color=\"secondary\">\n                                <h3>\n                                    São Paulo, Brazil\n                                </h3>\n                            </ion-text>\n                            <ion-menu-toggle class=\"mto\" auto-hide=\"false\">\n                                <a class=\"text08\" tappable (click)=\"goToEditProgile()\">\n                                    <ion-text color=\"medium\">\n                                        <ion-icon name=\"contact\"></ion-icon>\n                                        <strong>edit profile</strong>\n                                    </ion-text>\n                                </a>\n                                <ion-text color=\"secondary\"> | </ion-text>\n                                <a class=\"text08\" tappable (click)=\"logout()\">\n                                    <ion-text color=\"medium\">\n                                        <ion-icon name=\"log-out\"></ion-icon>\n                                        <strong>logout</strong>\n                                    </ion-text>\n                                </a>\n                            </ion-menu-toggle>\n                        </ion-label>\n                    </ion-item>\n\n                </ion-toolbar>\n            </ion-header>\n\n            <ion-content class=\"bg-profile\">\n                <ion-list>\n                    <ion-list-header color=\"dark\">\n                        <ion-label>Menu</ion-label>\n                    </ion-list-header>\n\n                    <ion-menu-toggle auto-hide=\"false\" *ngFor=\"let p of appPages\">\n                        <ion-item [routerLink]=\"[p.url]\" color=\"primary\">\n                            <ion-icon slot=\"start\" [name]=\"p.icon\" color=\"light\"></ion-icon>\n                            <ion-label>\n                                {{p.title}}\n                            </ion-label>\n                        </ion-item>\n                    </ion-menu-toggle>\n                </ion-list>\n            </ion-content>\n        </ion-menu>\n        <ion-router-outlet main></ion-router-outlet>\n    </ion-split-pane>\n</ion-app>"
 
 /***/ }),
 
@@ -947,7 +947,7 @@ module.exports = "<ion-app>\n  <ion-split-pane>\n    <ion-menu>\n      <ion-head
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host ion-content {\n  --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));\n}\n:host ion-list.list-md {\n  padding: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taXJ6YS9EZXNrdG9wL1Byb2plY3RzL1BhYXNoby9zcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNJO0VBQ0ksc0ZBQUE7QUNBUjtBRElRO0VBQ0ksVUFBQTtBQ0ZaIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICAgIGlvbi1jb250ZW50IHtcbiAgICAgICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCB2YXIoLS1pb24tY29sb3ItZGFyayksIHZhcigtLWlvbi1jb2xvci1wcmltYXJ5KSk7XG4gICAgfVxuXG4gICAgaW9uLWxpc3Qge1xuICAgICAgICAmLmxpc3QtbWQge1xuICAgICAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgfVxuICAgIH1cbn0iLCI6aG9zdCBpb24tY29udGVudCB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDEzNWRlZywgdmFyKC0taW9uLWNvbG9yLWRhcmspLCB2YXIoLS1pb24tY29sb3ItcHJpbWFyeSkpO1xufVxuOmhvc3QgaW9uLWxpc3QubGlzdC1tZCB7XG4gIHBhZGRpbmc6IDA7XG59Il19 */"
+module.exports = ":host ion-content {\n  --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));\n}\n:host ion-list.list-md {\n  padding: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taXJ6YS9EZXNrdG9wL1Byb2plY3RzL1BhYXNoby9zcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNJO0VBQ0ksc0ZBQUE7QUNBUjtBREdRO0VBQ0ksVUFBQTtBQ0RaIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICAgIGlvbi1jb250ZW50IHtcbiAgICAgICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCB2YXIoLS1pb24tY29sb3ItZGFyayksIHZhcigtLWlvbi1jb2xvci1wcmltYXJ5KSk7XG4gICAgfVxuICAgIGlvbi1saXN0IHtcbiAgICAgICAgJi5saXN0LW1kIHtcbiAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIH1cbiAgICB9XG59IiwiOmhvc3QgaW9uLWNvbnRlbnQge1xuICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxMzVkZWcsIHZhcigtLWlvbi1jb2xvci1kYXJrKSwgdmFyKC0taW9uLWNvbG9yLXByaW1hcnkpKTtcbn1cbjpob3N0IGlvbi1saXN0Lmxpc3QtbWQge1xuICBwYWRkaW5nOiAwO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -1048,21 +1048,19 @@ var AppComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _mobiscroll_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mobiscroll/angular */ "./node_modules/@mobiscroll/angular/dist/esm5/mobiscroll.angular.min.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
-/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _pages_modal_image_image_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/modal/image/image.module */ "./src/app/pages/modal/image/image.module.ts");
-/* harmony import */ var _pages_modal_search_filter_search_filter_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/modal/search-filter/search-filter.module */ "./src/app/pages/modal/search-filter/search-filter.module.ts");
-/* harmony import */ var _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/notifications/notifications.component */ "./src/app/components/notifications/notifications.component.ts");
-/* harmony import */ var _components_scrollview_scrollview_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/scrollview/scrollview.component */ "./src/app/components/scrollview/scrollview.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
+/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _pages_modal_image_image_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/modal/image/image.module */ "./src/app/pages/modal/image/image.module.ts");
+/* harmony import */ var _pages_modal_search_filter_search_filter_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/modal/search-filter/search-filter.module */ "./src/app/pages/modal/search-filter/search-filter.module.ts");
+/* harmony import */ var _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/notifications/notifications.component */ "./src/app/components/notifications/notifications.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1080,37 +1078,34 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 // Modal Pages
 
 
 // Components
 
-
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"], _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_14__["NotificationsComponent"], _components_scrollview_scrollview_component__WEBPACK_IMPORTED_MODULE_15__["ScrollviewComponent"]],
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_13__["NotificationsComponent"]],
             imports: [
                 _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormsModule"],
-                _mobiscroll_angular__WEBPACK_IMPORTED_MODULE_1__["MbscModule"],
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
-                _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["IonicModule"].forRoot(),
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-                _pages_modal_image_image_module__WEBPACK_IMPORTED_MODULE_12__["ImagePageModule"],
-                _pages_modal_search_filter_search_filter_module__WEBPACK_IMPORTED_MODULE_13__["SearchFilterPageModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
+                _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["IonicModule"].forRoot(),
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _pages_modal_image_image_module__WEBPACK_IMPORTED_MODULE_11__["ImagePageModule"],
+                _pages_modal_search_filter_search_filter_module__WEBPACK_IMPORTED_MODULE_12__["SearchFilterPageModule"]
             ],
-            entryComponents: [_components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_14__["NotificationsComponent"]],
+            entryComponents: [_components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_13__["NotificationsComponent"]],
             providers: [
-                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_9__["StatusBar"],
-                _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_8__["SplashScreen"],
-                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["IonicRouteStrategy"] }
+                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_8__["StatusBar"],
+                _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_7__["SplashScreen"],
+                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["IonicRouteStrategy"] }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -1177,217 +1172,6 @@ var NotificationsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], NotificationsComponent);
     return NotificationsComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/scrollview/scrollview.component.html":
-/*!*****************************************************************!*\
-  !*** ./src/app/components/scrollview/scrollview.component.html ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"md-cards\">\n    <div class=\"md-card-cont\">\n        <h3>New & Updated Games</h3>\n        <mbsc-scrollview [options]=\"scrollViewOptions\" class=\"demo-card\">\n            <mbsc-scrollview-item mbsc-card *ngFor=\"let c of newGames\">\n                <mbsc-card-content>\n                    <img class=\"md-img\" [src]=\"c.image\" draggable=\"false\">\n                    <mbsc-card-title>{{c.title}}</mbsc-card-title>\n                    <mbsc-card-subtitle>{{c.dev}}</mbsc-card-subtitle>\n                    <div class=\"md-rank\">{{c.rank}}<span class=\"mbsc-ic mbsc-ic-star3\"></span></div>\n                </mbsc-card-content>\n            </mbsc-scrollview-item>\n        </mbsc-scrollview>\n\n        <h3>Media & Video Apps</h3>\n        <mbsc-scrollview [options]=\"scrollViewOptions\" class=\"demo-card\">\n            <mbsc-scrollview-item mbsc-card *ngFor=\"let c of mediaVideo\">\n                <mbsc-card-content>\n                    <img class=\"md-img\" [src]=\"c.image\" draggable=\"false\">\n                    <mbsc-card-title>{{c.title}}</mbsc-card-title>\n                    <mbsc-card-subtitle>{{c.dev}}</mbsc-card-subtitle>\n                    <div class=\"md-rank\">{{c.rank}}<span class=\"mbsc-ic mbsc-ic-star3\"></span></div>\n                </mbsc-card-content>\n            </mbsc-scrollview-item>\n        </mbsc-scrollview>\n\n        <h3>New & Updated Apps</h3>\n        <mbsc-scrollview [options]=\"scrollViewOptions\" class=\"demo-card\">\n            <mbsc-scrollview-item mbsc-card *ngFor=\"let c of newUpdated\">\n                <mbsc-card-content>\n                    <img class=\"md-img\" [src]=\"c.image\" draggable=\"false\">\n                    <mbsc-card-title>{{c.title}}</mbsc-card-title>\n                    <mbsc-card-subtitle>{{c.dev}}</mbsc-card-subtitle>\n                    <div class=\"md-rank\">{{c.rank}}<span class=\"mbsc-ic mbsc-ic-star3\"></span></div>\n                </mbsc-card-content>\n            </mbsc-scrollview-item>\n        </mbsc-scrollview>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/components/scrollview/scrollview.component.scss":
-/*!*****************************************************************!*\
-  !*** ./src/app/components/scrollview/scrollview.component.scss ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".md-cards h3 {\n  padding: 0.5em;\n  margin: 0;\n}\n\n.md-img {\n  pointer-events: none;\n  border-radius: 8px;\n}\n\n.demo-card .mbsc-card-title {\n  font-size: 14px;\n  padding-top: 8px;\n  margin: 0;\n}\n\n.md-rank {\n  font-size: 12px;\n  position: absolute;\n  bottom: 8px;\n  left: 8px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9taXJ6YS9EZXNrdG9wL1Byb2plY3RzL1BhYXNoby9zcmMvYXBwL2NvbXBvbmVudHMvc2Nyb2xsdmlldy9zY3JvbGx2aWV3LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL3Njcm9sbHZpZXcvc2Nyb2xsdmlldy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGNBQUE7RUFDQSxTQUFBO0FDQ0o7O0FERUE7RUFDSSxvQkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FERUE7RUFDSSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxTQUFBO0FDQ0o7O0FERUE7RUFDSSxlQUFBO0VBQ0Esa0JBQUE7RUFDQSxXQUFBO0VBQ0EsU0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zY3JvbGx2aWV3L3Njcm9sbHZpZXcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWQtY2FyZHMgaDMge1xuICAgIHBhZGRpbmc6IC41ZW07XG4gICAgbWFyZ2luOiAwO1xufVxuXG4ubWQtaW1nIHtcbiAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiA4cHg7XG59XG5cbi5kZW1vLWNhcmQgLm1ic2MtY2FyZC10aXRsZSB7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICAgIHBhZGRpbmctdG9wOiA4cHg7XG4gICAgbWFyZ2luOiAwO1xufVxuXG4ubWQtcmFuayB7XG4gICAgZm9udC1zaXplOiAxMnB4O1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBib3R0b206IDhweDtcbiAgICBsZWZ0OiA4cHg7XG59IiwiLm1kLWNhcmRzIGgzIHtcbiAgcGFkZGluZzogMC41ZW07XG4gIG1hcmdpbjogMDtcbn1cblxuLm1kLWltZyB7XG4gIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG59XG5cbi5kZW1vLWNhcmQgLm1ic2MtY2FyZC10aXRsZSB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgcGFkZGluZy10b3A6IDhweDtcbiAgbWFyZ2luOiAwO1xufVxuXG4ubWQtcmFuayB7XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDhweDtcbiAgbGVmdDogOHB4O1xufSJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/components/scrollview/scrollview.component.ts":
-/*!***************************************************************!*\
-  !*** ./src/app/components/scrollview/scrollview.component.ts ***!
-  \***************************************************************/
-/*! exports provided: ScrollviewComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollviewComponent", function() { return ScrollviewComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ScrollviewComponent = /** @class */ (function () {
-    function ScrollviewComponent() {
-        this.scrollViewOptions = {
-            layout: 'fixed',
-            itemWidth: 134,
-            snap: false
-        };
-        this.newGames = [{
-                image: 'https://img.mobiscroll.com/demos/worms3.png',
-                title: 'Worms 3',
-                dev: 'Team 17 Digital Limited',
-                rank: 4.2
-            }, {
-                image: 'https://img.mobiscroll.com/demos/candycrush.png',
-                title: 'Candy Crush Saga',
-                dev: 'King',
-                rank: 4.3
-            }, {
-                image: 'https://img.mobiscroll.com/demos/angrybirds.png',
-                title: 'Angry Birds',
-                dev: 'Rovino',
-                rank: 4.4
-            }, {
-                image: 'https://img.mobiscroll.com/demos/nfs.png',
-                title: 'Need for Speed™ No Limits',
-                dev: 'ELECTRONIC ARTS',
-                rank: 4.3
-            }, {
-                image: 'https://img.mobiscroll.com/demos/heartstone.png',
-                title: 'Hearthstone',
-                dev: 'Blizzard Entertainment Inc.',
-                rank: 4.2
-            }, {
-                image: 'https://img.mobiscroll.com/demos/fruitninja.png',
-                title: 'Fruit Ninja',
-                dev: 'Halfbrick Studios',
-                rank: 4.3
-            }, {
-                image: 'https://img.mobiscroll.com/demos/subwaysurf.png',
-                title: 'Subway Surfers',
-                dev: 'Kiloo',
-                rank: 4.4
-            }, {
-                image: 'https://img.mobiscroll.com/demos/templerun.png',
-                title: 'Temple Run',
-                dev: 'Imangi Studios',
-                rank: 4.3
-            }, {
-                image: 'https://img.mobiscroll.com/demos/minecraft.png',
-                title: 'Minecraft: Pocket Edition',
-                dev: 'Mojang ',
-                rank: 4.4
-            }];
-        this.mediaVideo = [{
-                image: 'https://img.mobiscroll.com/demos/vlc.png',
-                title: 'VLC for Android',
-                dev: 'Videolabs ',
-                rank: 4.3
-            }, {
-                image: 'https://img.mobiscroll.com/demos/realplayer.png',
-                title: 'RealPlayer®',
-                dev: 'RealNetworks, Inc.',
-                rank: 4.3
-            }, {
-                image: 'https://img.mobiscroll.com/demos/motogal.png',
-                title: 'Motorola Gallery',
-                dev: 'Motorola Mobility LLC. ',
-                rank: 3.9
-            }, {
-                image: 'https://img.mobiscroll.com/demos/revesemov.png',
-                title: 'Reverse Movie FX',
-                dev: 'Bizo Mobile',
-                rank: 4.6
-            }, {
-                image: 'https://img.mobiscroll.com/demos/sure.png',
-                title: 'SURE Universal Remote',
-                dev: 'Tekoia Ltd.',
-                rank: 4.4
-            }, {
-                image: 'https://img.mobiscroll.com/demos/ringdriod.png',
-                title: 'Ringdroid',
-                dev: 'Ringdroid Team ',
-                rank: 4.4
-            }, {
-                image: 'https://img.mobiscroll.com/demos/funny.png',
-                title: 'Funny Camera - Video Booth Fun',
-                dev: 'Kiloo',
-                rank: 4.1
-            }, {
-                image: 'https://img.mobiscroll.com/demos/gif.png',
-                title: 'GIF Keyboard',
-                dev: 'IRiffsy, Inc.',
-                rank: 4.1
-            }, {
-                image: 'https://img.mobiscroll.com/demos/bs.png',
-                title: 'BSPlayer',
-                dev: 'BSPlayer media',
-                rank: 4.4
-            }, {
-                image: 'https://img.mobiscroll.com/demos/vac.png',
-                title: 'video audio cutter',
-                dev: 'mytechnosound ',
-                rank: 4.3
-            }];
-        this.newUpdated = [{
-                image: 'https://img.mobiscroll.com/demos/netflix.png',
-                title: 'Netflix',
-                dev: 'Netflix, Inc. ',
-                rank: 4.4
-            }, {
-                image: 'https://img.mobiscroll.com/demos/colorfy.png',
-                title: 'Colorfy - Coloring Book Free',
-                dev: 'Fun Games For Free',
-                rank: 4.7
-            }, {
-                image: 'https://img.mobiscroll.com/demos/wego.png',
-                title: 'Wego Flights & Hotels',
-                dev: 'Wego.com',
-                rank: 4.3
-            }, {
-                image: 'https://img.mobiscroll.com/demos/ali.png',
-                title: 'Alibaba.com B2B Trade App',
-                dev: 'Alibaba.com Hong Kong Limited ',
-                rank: 4.1
-            }, {
-                image: 'https://img.mobiscroll.com/demos/5k.png',
-                title: '5K Run: 5K Runner®',
-                dev: 'Fitness22',
-                rank: 4.4
-            }, {
-                image: 'https://img.mobiscroll.com/demos/nuzzelnws.png',
-                title: 'Nuzzel News',
-                dev: 'Nuzzel, Inc.',
-                rank: 4.3
-            }, {
-                image: 'https://img.mobiscroll.com/demos/solarsysexpl.png',
-                title: 'Solar System Explorer 3D',
-                dev: 'Neil Burlock',
-                rank: 4.5
-            }, {
-                image: 'https://img.mobiscroll.com/demos/elevate.png',
-                title: 'Elevate - Brain Training',
-                dev: 'Elevate Labs',
-                rank: 4.5
-            }, {
-                image: 'https://img.mobiscroll.com/demos/deezer.png',
-                title: 'Deezer Music',
-                dev: 'Deezer Mobile',
-                rank: 4.1
-            }];
-    }
-    ScrollviewComponent.prototype.ngOnInit = function () {
-    };
-    ScrollviewComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-scrollview',
-            template: __webpack_require__(/*! ./scrollview.component.html */ "./src/app/components/scrollview/scrollview.component.html"),
-            styles: [__webpack_require__(/*! ./scrollview.component.scss */ "./src/app/components/scrollview/scrollview.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ScrollviewComponent);
-    return ScrollviewComponent;
 }());
 
 
@@ -1592,7 +1376,7 @@ var SearchFilterPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-buttons slot=\"start\">\n            <ion-button color=\"primary\" (click)=\"closeModal()\">\n                <ion-icon name=\"close\" color=\"light\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n        <ion-title>\n            Search Filter\n        </ion-title>\n    </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n\n    <ion-item margin-bottom>\n        <ion-label color=\"primary\" stacked>\n            <ion-text color=\"dark\" class=\"fw500\">ZipCode Area</ion-text>\n        </ion-label>\n        <ion-input type=\"number\" placeholder=\"Put your zipcode preference area\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n        <ion-label class=\"no-margin-bottom\" stacked>\n            <ion-text color=\"dark\" class=\"fw500\">Radius:</ion-text>\n        </ion-label>\n        <ion-range min=\"1\" max=\"50\" step=\"1\" value=\"1\" class=\"no-padding-top\" [(ngModel)]=\"radiusmiles\">\n            <ion-label slot=\"start\">\n                <ion-text color=\"primary\"> {{radiusmiles}} Mile(s)</ion-text>\n            </ion-label>\n        </ion-range>\n    </ion-item>\n\n    <ion-item>\n        <ion-label class=\"fw500\" color=\"dark\">Organize by</ion-label>\n        <ion-select [(ngModel)]=\"organizeby\">\n            <ion-select-option>Most Relevant</ion-select-option>\n            <ion-select-option>Closest</ion-select-option>\n            <ion-select-option>Low Price</ion-select-option>\n            <ion-select-option>High Price</ion-select-option>\n            <ion-select-option>Shorter delivery time</ion-select-option>\n            <ion-select-option>Most rating</ion-select-option>\n        </ion-select>\n    </ion-item>\n\n\n    <ion-item margin-bottom>\n        <ion-label class=\"no-margin-bottom\">\n            <ion-text color=\"dark\" class=\"fw500\">Min/Max Price:</ion-text>\n        </ion-label>\n\n        <ion-range dualKnobs=\"true\" [(ngModel)]=\"minmaxprice\" min=\"10\" max=\"1000\" step=\"10\" class=\"no-padding-top\">\n            <ion-label slot=\"start\">\n                <ion-text color=\"primary\">$ {{minmaxprice.lower}}</ion-text>\n            </ion-label>\n            <ion-label slot=\"end\">\n                <ion-text color=\"primary\">$ {{minmaxprice.upper}}</ion-text>\n            </ion-label>\n        </ion-range>\n    </ion-item>\n\n    <ion-button expand=\"full\" color=\"primary\" (click)=\"closeModal()\">Filter Results</ion-button>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-buttons slot=\"start\">\n            <ion-button color=\"primary\" (click)=\"closeModal()\">\n                <ion-icon name=\"close\" color=\"light\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n        <ion-title>\n            تنظیمات جستجو\n        </ion-title>\n    </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n\n\n    <!--     <ion-item margin-bottom>\n        <ion-label color=\"primary\" stacked>\n            <ion-text color=\"dark\" class=\"fw500\">ZipCode Area</ion-text>\n        </ion-label>\n        <ion-input type=\"number\" placeholder=\"Put your zipcode preference area\"></ion-input>\n    </ion-item>\n -->\n    <!--     <ion-list>\n            <ion-item *ngFor=\"let entry of {1,2}\">\n              <ion-label>{{entry.val}}</ion-label>\n              <ion-checkbox slot=\"end\" [(ngModel)]=\"entry.isChecked\"></ion-checkbox>\n            </ion-item>\n          </ion-list>\n -->\n\n    <ion-list>\n        <ion-list-header>انتخاب دسته بندی</ion-list-header>\n\n        <ion-item *ngFor=\"let category of categroyData\">\n            <ion-img src=\"\"></ion-img>\n            <ion-label>{{category.name}}</ion-label>\n            <ion-checkbox></ion-checkbox>\n        </ion-item>\n    </ion-list>\n\n\n    <!--     <ion-item>\n        <ion-label class=\"no-margin-bottom\" stacked>\n            <ion-text color=\"dark\" class=\"fw500\">Radius:</ion-text>\n        </ion-label>\n        <ion-range min=\"1\" max=\"50\" step=\"1\" value=\"1\" class=\"no-padding-top\" [(ngModel)]=\"radiusmiles\">\n            <ion-label slot=\"start\">\n                <ion-text color=\"primary\"> {{radiusmiles}} Mile(s)</ion-text>\n            </ion-label>\n        </ion-range>\n    </ion-item>\n -->\n\n\n    <!--     <ion-item margin-bottom>\n        <ion-label class=\"no-margin-bottom\">\n            <ion-text color=\"dark\" class=\"fw500\">Min/Max Price:</ion-text>\n        </ion-label>\n\n        <ion-range dualKnobs=\"true\" [(ngModel)]=\"minmaxprice\" min=\"10\" max=\"1000\" step=\"10\" class=\"no-padding-top\">\n            <ion-label slot=\"start\">\n                <ion-text color=\"primary\">$ {{minmaxprice.lower}}</ion-text>\n            </ion-label>\n            <ion-label slot=\"end\">\n                <ion-text color=\"primary\">$ {{minmaxprice.upper}}</ion-text>\n            </ion-label>\n        </ion-range>\n    </ion-item>\n -->\n    <ion-button expand=\"full\" color=\"secondary\" (click)=\"closeModal()\">فیلتر کن</ion-button>\n</ion-content>"
 
 /***/ }),
 
@@ -1619,6 +1403,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchFilterPage", function() { return SearchFilterPage; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/api.service */ "./src/app/services/api.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1630,16 +1415,27 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var SearchFilterPage = /** @class */ (function () {
-    function SearchFilterPage(modalCtrl) {
+    function SearchFilterPage(modalCtrl, apiService) {
         this.modalCtrl = modalCtrl;
+        this.apiService = apiService;
         this.radiusmiles = 1;
         this.minmaxprice = {
             upper: 500,
             lower: 10
         };
+        this.categroyData = [];
     }
     SearchFilterPage.prototype.ngOnInit = function () {
+        this.getCategories();
+    };
+    SearchFilterPage.prototype.getCategories = function () {
+        var _this = this;
+        this.apiService.getCategories().subscribe(function (response) {
+            console.log(response);
+            _this.categroyData = response;
+        });
     };
     SearchFilterPage.prototype.closeModal = function () {
         this.modalCtrl.dismiss();
@@ -1650,11 +1446,151 @@ var SearchFilterPage = /** @class */ (function () {
             template: __webpack_require__(/*! ./search-filter.page.html */ "./src/app/pages/modal/search-filter/search-filter.page.html"),
             styles: [__webpack_require__(/*! ./search-filter.page.scss */ "./src/app/pages/modal/search-filter/search-filter.page.scss")]
         }),
-        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ModalController"]])
+        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ModalController"], _services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"]])
     ], SearchFilterPage);
     return SearchFilterPage;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/services/api.service.ts":
+/*!*****************************************!*\
+  !*** ./src/app/services/api.service.ts ***!
+  \*****************************************/
+/*! exports provided: ApiService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiService", function() { return ApiService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _apiPath__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./apiPath */ "./src/app/services/apiPath.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ApiService = /** @class */ (function () {
+    function ApiService(http) {
+        this.http = http;
+        // API path
+        this.base_path = 'http://193.176.243.61';
+        // Http Options
+        this.httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                'Content-Type': 'application/json'
+            })
+        };
+    }
+    // Handle API errors
+    ApiService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Something bad happened; please try again later.');
+    };
+    // Create a new item
+    /* createItem(item): Observable<Categroy> {
+      return this.http
+        .post<Student>(this.base_path, JSON.stringify(item), this.httpOptions)
+        .pipe(
+          retry(2),
+          catchError(this.handleError)
+        )
+    }
+   */
+    // Get single student data by ID
+    /* getItem(id): Observable<Student> {
+      return this.http
+        .get<Student>(this.base_path + '/' + id)
+        .pipe(
+          retry(2),
+          catchError(this.handleError)
+        )
+    }
+   */
+    // Get students data
+    ApiService.prototype.getCategories = function () {
+        return this.http
+            .get(this.base_path + _apiPath__WEBPACK_IMPORTED_MODULE_4__["apiPath"].getAllCategories)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["retry"])(2), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.getAllEvents = function () {
+        return this.http
+            .get(this.base_path + _apiPath__WEBPACK_IMPORTED_MODULE_4__["apiPath"].getAllEvents)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["retry"])(2), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.getEventList = function (eventtype) {
+        return this.http
+            .get(this.base_path + _apiPath__WEBPACK_IMPORTED_MODULE_4__["apiPath"].getEvents + '?type=' + eventtype)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["retry"])(2), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.sendMobileNumber = function (mobile) {
+        return this.http
+            .post(this.base_path + _apiPath__WEBPACK_IMPORTED_MODULE_4__["apiPath"].postOTP, JSON.stringify(mobile), this.httpOptions)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["retry"])(2), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError));
+    };
+    ApiService.prototype.confirmMobile = function (mobile) {
+        return this.http
+            .post(this.base_path + _apiPath__WEBPACK_IMPORTED_MODULE_4__["apiPath"].confirmMobile, JSON.stringify(mobile), this.httpOptions);
+    };
+    ApiService.prototype.confirmMobile2 = function (mobile) {
+        this.http
+            .post(this.base_path + _apiPath__WEBPACK_IMPORTED_MODULE_4__["apiPath"].confirmMobile, JSON.stringify(mobile), this.httpOptions);
+    };
+    ApiService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], ApiService);
+    return ApiService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/apiPath.ts":
+/*!*************************************!*\
+  !*** ./src/app/services/apiPath.ts ***!
+  \*************************************/
+/*! exports provided: apiPath */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "apiPath", function() { return apiPath; });
+var apiPath;
+(function (apiPath) {
+    apiPath["getAllCategories"] = "/api/categories";
+    apiPath["getAllEvents"] = "/api/events";
+    apiPath["getEvents"] = "/api/v2/home/events";
+    apiPath["postOTP"] = "/api/v1/signup";
+    apiPath["confirmMobile"] = "/api/v1/confirmOTP";
+})(apiPath || (apiPath = {}));
 
 
 /***/ }),
