@@ -76,17 +76,13 @@ export class HomeResultsPage {
   getAllEvents() {
     this.apiService.getAllEvents().subscribe((response: PaashoEvent[]) => {
       console.log(response);
-      for (let i = 0; i < response.length; i++) { 
-        this.eventListPagination.push(response[i]);
-      }
+      this.eventListPagination.push(response);
     });
   }
   getFilteredEvents(eventtype: eventType) {
-    this.apiService.getEventListPagination(eventtype, this.page, this.size).subscribe((response: PaashoEvent[]) => {
+    this.apiService.getEventListPagination(eventtype, this.page, this.size).subscribe(response => {
       console.log(response);
-      for (let i = 0; i < response.length; i++) {
-        this.eventListPagination.push(response[i]);
-      }
+      this.eventList = response;
     });
   }
 

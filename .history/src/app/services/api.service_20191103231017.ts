@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders, HttpEvent, HttpErrorResponse, HttpResponse, Ht
 import { Category } from '../models/Category';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError, map } from 'rxjs/operators';
-import {PaashoEvent} from '../models/PaashoEvent';
+import {Event} from '../models/Event';
 import {eventType} from './eventType';
 import {Mobile} from '../models/Mobile';
 import {apiPath} from './apiPath';
@@ -80,33 +80,24 @@ export class ApiService {
         catchError(this.handleError)
       );
   }
-  getAllEvents(): Observable<PaashoEvent[]> {
+  getAllEvents(): Observable<Event> {
     return this.http
-      .get<PaashoEvent[]>(this.base_path + apiPath.getAllEvents)
+      .get<Event>(this.base_path + apiPath.getAllEvents)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
 
-  getEventList(eventtype: eventType): Observable<PaashoEvent[]> {
+  getEventList(eventtype: eventType): Observable<Event> {
     return this.http
-      .get<PaashoEvent[]>(this.base_path + apiPath.getEvents + '?type=' + eventtype)
+      .get<Event>(this.base_path + apiPath.getEvents + '?type=' + eventtype)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
-  getEventListPagination(eventtype: eventType, page: number, size: number): Observable<PaashoEvent[]> {
-    return this.http
-      .get<PaashoEvent[]>(this.base_path + apiPath.getEvents + '?type=' + eventtype + '&page=' + page + ' &size=' + size)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      );
-  }
-
-  sendMobileNumber(mobile: Mobile): Observable<string> {
+   sendMobileNumber(mobile: Mobile): Observable<string> {
     return this.http
       .post<string>(this.base_path + apiPath.postOTP, JSON.stringify(mobile), httpOptions)
       .pipe(

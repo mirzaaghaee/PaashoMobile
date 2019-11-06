@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component , ViewChild} from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
 import {
   NavController,
@@ -6,17 +6,15 @@ import {
   MenuController,
   ToastController,
   PopoverController,
-  ModalController
-} from '@ionic/angular';
+  ModalController } from '@ionic/angular';
 
 // Modals
 import { SearchFilterPage } from '../../pages/modal/search-filter/search-filter.page';
 import { ImagePage } from './../modal/image/image.page';
 // Call notifications test by Popover and Custom Component.
 import { NotificationsComponent } from './../../components/notifications/notifications.component';
-import { ApiService } from '../../services/api.service';
-import { eventType } from '../../services/eventType';
-import {PaashoEvent} from '../../models/PaashoEvent';
+import {ApiService} from '../../services/api.service';
+import {eventType} from '../../services/eventType';
 
 
 
@@ -30,13 +28,9 @@ export class HomeResultsPage {
   searchKey = '';
   yourLocation = '123 Test Street';
   themeCover = 'assets/img/ionic4-Start-Theme-cover.jpg';
-  eventList: PaashoEvent[];
-  eventListPagination: PaashoEvent[];
+  eventList: any;
   eventtype: eventType;
-  page: number;
-  size: number;
-
-
+  
   constructor(
     public navCtrl: NavController,
     public menuCtrl: MenuController,
@@ -47,46 +41,31 @@ export class HomeResultsPage {
     public apiService: ApiService
   ) {
     this.eventList = [];
-    this.eventListPagination = [];
     this.eventtype = eventType.TODAY;
-    this.page = 1;
-    this.size = 3;
-
 
   }
 
-  list: any[];
+ list: any[];
   ionViewWillEnter() {
     console.log(eventType.TODAY.toString());
     console.log('ionViewWillEnter');
     this.menuCtrl.enable(true);
-    // this.getFilteredEvents(eventType.WEEK);
-    this.list = [1, 100, 334, 343, 34, 34, 343, 23423, 23423, 23423];
-    this.getFilteredEvents(this.eventtype);
+     // this.getFilteredEvents(eventType.WEEK);
+     this.list = [1, 100, 334, 343, 34, 34, 343, 23423, 23423, 23423];
+     this.getAllEvents();
 
-  }
-  changeFilter(eventtype: eventType) {
-    this.page = 1;
-    this.eventList = [];
-    this.eventListPagination = [];
-    this.eventtype = eventtype;
-    this.getFilteredEvents(eventtype);
   }
 
   getAllEvents() {
-    this.apiService.getAllEvents().subscribe((response: PaashoEvent[]) => {
+    this.apiService.getAllEvents().subscribe(response => {
       console.log(response);
-      for (let i = 0; i < response.length; i++) { 
-        this.eventListPagination.push(response[i]);
-      }
+      this.eventList = response;
     });
   }
   getFilteredEvents(eventtype: eventType) {
-    this.apiService.getEventListPagination(eventtype, this.page, this.size).subscribe((response: PaashoEvent[]) => {
+    this.apiService.getEventList(eventtype).subscribe(response => {
       console.log(response);
-      for (let i = 0; i < response.length; i++) {
-        this.eventListPagination.push(response[i]);
-      }
+      this.eventList = response;
     });
   }
 
@@ -105,9 +84,6 @@ export class HomeResultsPage {
         event.target.disabled = true;
       }
     }, 500);
-    this.page += 1;
-    this.getFilteredEvents(this.eventtype);
-    console.log('page:' + this.page + 'size:' + this.size);
   }
 
   toggleInfiniteScroll() {
@@ -154,7 +130,7 @@ export class HomeResultsPage {
     changeLocation.present();
   }
 
-  async searchFilter() {
+  async searchFilter () {
     const modal = await this.modalCtrl.create({
       component: SearchFilterPage
     });

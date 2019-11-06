@@ -16,7 +16,6 @@ import { ImagePage } from './../modal/image/image.page';
 import { NotificationsComponent } from './../../components/notifications/notifications.component';
 import { ApiService } from '../../services/api.service';
 import { eventType } from '../../services/eventType';
-import {PaashoEvent} from '../../models/PaashoEvent';
 
 
 
@@ -30,8 +29,8 @@ export class HomeResultsPage {
   searchKey = '';
   yourLocation = '123 Test Street';
   themeCover = 'assets/img/ionic4-Start-Theme-cover.jpg';
-  eventList: PaashoEvent[];
-  eventListPagination: PaashoEvent[];
+  eventList: Event[];
+  eventListPagination: Event[];
   eventtype: eventType;
   page: number;
   size: number;
@@ -74,19 +73,15 @@ export class HomeResultsPage {
   }
 
   getAllEvents() {
-    this.apiService.getAllEvents().subscribe((response: PaashoEvent[]) => {
+    this.apiService.getAllEvents().subscribe(response => {
       console.log(response);
-      for (let i = 0; i < response.length; i++) { 
-        this.eventListPagination.push(response[i]);
-      }
+      this.eventList = response;
     });
   }
   getFilteredEvents(eventtype: eventType) {
-    this.apiService.getEventListPagination(eventtype, this.page, this.size).subscribe((response: PaashoEvent[]) => {
+    this.apiService.getEventListPagination(eventtype, this.page, this.size).subscribe(response => {
       console.log(response);
-      for (let i = 0; i < response.length; i++) {
-        this.eventListPagination.push(response[i]);
-      }
+      this.eventList = response;
     });
   }
 

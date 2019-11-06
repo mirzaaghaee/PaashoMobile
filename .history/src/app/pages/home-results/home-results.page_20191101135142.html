@@ -19,7 +19,7 @@
     </ion-toolbar>
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-button (click)="changeFilter('TODAY')">
+            <ion-button (click)="getFilteredEvents('TODAY')">
                 <ion-label>امروز</ion-label>
                 <ion-icon name="trending-up"></ion-icon>
             </ion-button>
@@ -27,7 +27,7 @@
         </ion-buttons>
         <ion-title>
             <ion-buttons>
-                <ion-button (click)="changeFilter('WEEK')">
+                <ion-button (click)="getFilteredEvents('WEEK')">
                     <ion-label>این هفته</ion-label>
                     <ion-icon name="pulse"></ion-icon>
                 </ion-button>
@@ -35,7 +35,7 @@
             </ion-buttons>
         </ion-title>
 
-        <ion-buttons slot="end" (click)="changeFilter('POPULAR')">
+        <ion-buttons slot="end" (click)="getFilteredEvents('POPULAR')">
             <ion-button>
                 <ion-label>پربازدید</ion-label>
 
@@ -75,42 +75,49 @@
 
 
 <ion-content>
-    <ion-list>
-        <ion-item *ngFor="let item of eventListPagination">
-            <ion-card class="bg-white">
-                <ion-img [src]="themeCover"></ion-img>
-                <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>
-                    Modal 1: Modal Image
-                </ion-button>
-                <ion-button shape="round" fill="outline" size="small" color="primary" (click)="alertLocation()">
-                    Location
-                    <ion-icon name="locate"></ion-icon>
-                </ion-button>
+    <ion-list></ion-list>
 
-            </ion-card>
-
-
-
-
-            <ion-label>{{item}}</ion-label>
-        </ion-item>
-    </ion-list>
-    <ion-infinite-scroll threshold="10%" (ionInfinite)="loadData($event)">
-        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="دریافت اطلاعات...">
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
         </ion-infinite-scroll-content>
     </ion-infinite-scroll>
 
 
 
+    <ion-card no-margin class="no-radius">
+        <ion-item lines="none" color="medium">
+            <ion-label>
+                <h2 no-margin class="fw500 no-margin">
+                    <ion-text color="dark">Alert / Toast test</ion-text>
+                </h2>
+
+                <p class="text-11x no-margin">
+                    <ion-text color="primary">{{yourLocation}}</ion-text>
+                </p>
+            </ion-label>
+            <ion-button shape="round" fill="outline" size="small" color="primary" (click)="alertLocation()">
+                Location
+                <ion-icon name="locate"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-card>
+
+    <ion-card class="bg-white">
+        <ion-img [src]="themeCover"></ion-img>
+        <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>
+            Modal 1: Modal Image
+        </ion-button>
+    </ion-card>
 
 
 
 
 
+    <ion-tabs class="tabs-positive tabs-icon-top">
 
+    </ion-tabs>
 </ion-content>
 
 <ion-footer>
-    <ion-label>salam</ion-label>
 </ion-footer>
 <popmenu></popmenu>
