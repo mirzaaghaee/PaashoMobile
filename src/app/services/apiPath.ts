@@ -1,6 +1,8 @@
 export enum apiPath {
     getAllCategories = '/api/categories',
-    getAllEvents = '/api/events' ,
+    event = '/api/events' ,
+    getMapEvents = '/api/events/map' ,
+    getAllMapEvents = '/api/events/map-all' ,
     getEvents = '/api/v2/home/events',
     postOTP= '/api/v1/signup' ,
     confirmMobile = '/api/v1/confirmOTP',

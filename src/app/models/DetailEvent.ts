@@ -1,0 +1,29 @@
+export interface DetailEvent {
+    address: string;
+    ageLimitFrom: number;
+    ageLimitTo: number;
+    capacity: number;
+    category: string;
+    categoryId: number;
+    code: string;
+    creator: string;
+    creatorId: number;
+    date: string;
+    description: string;
+    gender: String;
+    id: number;
+    instagram: string;
+    joinStatus: string;
+    latitude: number;
+    longitude: number;
+    participantNumber: number;
+    pricing: string;
+    score: number;
+    tel: string;
+    telegram: string;
+    time: string;
+    title: string;
+    titleId: number;
+    toDate: string;
+    view: number;
+}

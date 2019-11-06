@@ -10,6 +10,11 @@ import {apiPath} from './apiPath';
 import {HTTP, HTTPResponse} from '@ionic-native/http/ngx';
 import {jsonpCallbackContext} from '@angular/common/http/src/module';
 import {Profile} from '../models/Profile';
+import {DetailEvent} from '../models/DetailEvent';
+import {Title} from '../models/Title';
+import {MapEvent} from '../models/MapEvent';
+import {Participant} from '../models/Participant';
+import {Share} from '../models/Share';
 
 const httpOptions = {
     headers: new HttpHeaders({
@@ -87,7 +92,7 @@ export class ApiService {
 
     getAllEvents(): Observable<PaashoEvent[]> {
         return this.http
-            .get<PaashoEvent[]>(this.base_path + apiPath.getAllEvents)
+            .get<PaashoEvent[]>(this.base_path + apiPath.event)
             .pipe(
                 retry(2),
                 catchError(this.handleError)
@@ -110,6 +115,48 @@ export class ApiService {
                 retry(2),
                 catchError(this.handleError)
             );
+    }
+
+    getEventDetail(code: string): Observable<DetailEvent> {
+        return this.http.get<DetailEvent>(this.base_path + apiPath.event + '/' + code + '/detail').pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
+
+    getParticipants(code: string): Observable<Participant[]> {
+        return this.http.get<Participant[]>(this.base_path + apiPath.event + '/' + code + '/participants').pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
+
+    share(code: string): Observable<Share> {
+        return this.http.get<Share>(this.base_path + apiPath.event + '/' + code + '/share').pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
+
+    joinEvent(code: string): Observable<any> {
+        return this.http.post<HttpResponse<any>>(this.base_path + apiPath.event + '/' + code + '/join', null).pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
+
+    getMapEventsByLatitudeAndLongitude(latitude: number, longitude: number): Observable<MapEvent[]> {
+        return this.http.get<MapEvent[]>(this.base_path + apiPath.getMapEvents + '?longitude=' + longitude + '&latitude=' + latitude).pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
+
+    getAllMapEvents(): Observable<MapEvent[]> {
+        return this.http.get<MapEvent[]>(this.base_path + apiPath.getAllMapEvents).pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
     }
 
     sendMobileNumber(mobile: Mobile): Observable<string> {
@@ -192,6 +239,13 @@ export class ApiService {
 
     deniedNotification(notificationId: string): Observable<any> {
         return this.http.post<HttpResponse<any>>(this.base_path + apiPath.notifications + notificationId + '/cancel', null).pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
+
+    getTitlesByCategory(category: string): Observable<Title[]> {
+        return this.http.get<Title[]>(this.base_path + apiPath.event + '/' + category + '/titles').pipe(
             retry(2),
             catchError(this.handleError)
         );
