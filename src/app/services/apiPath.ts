@@ -11,5 +11,6 @@ export enum apiPath {
     inviteFriend = 'api/v1/inviteFriend',
     changeAvatar = 'api/v1/changeAvatar',
     notifications = 'api/v1/notifications/',
-    profile = 'api/v1/profile'
+    profile = 'api/v1/profile',
+    downloadImage = '/api/events/download'
   }

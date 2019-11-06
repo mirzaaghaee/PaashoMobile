@@ -250,6 +250,12 @@ export class ApiService {
             catchError(this.handleError)
         );
     }
+    downloadEventImage(id: number): Observable<Blob> {
+        return this.http.get<Blob>(this.base_path + apiPath.downloadImage + '?id=' + id).pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
 
     // Update item by id
     /* updateItem(id, item): Observable<Student> {
