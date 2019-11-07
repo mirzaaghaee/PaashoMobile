@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'settings', loadChildren: './pages/settings/settings.module#SettingsPageModule' , canActivate: [AuthGuardService]},
   { path: 'edit-profile', loadChildren: './pages/edit-profile/edit-profile.module#EditProfilePageModule' , canActivate: [AuthGuardService]},
   { path: 'home-results', loadChildren: './pages/home-results/home-results.module#HomeResultsPageModule', canActivate: [AuthGuardService] },
+  { path: 'eventdetail', loadChildren: './pages/modal/eventdetail/eventdetail.module#EventdetailPageModule' },
 ];
 
 @NgModule({

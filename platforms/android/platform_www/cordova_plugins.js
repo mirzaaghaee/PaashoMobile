@@ -283,6 +283,28 @@ module.exports = [
     "clobbers": [
       "SQLitePlugin"
     ]
+  },
+  {
+    "id": "cordova-plugin-geolocation.geolocation",
+    "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+    "pluginId": "cordova-plugin-geolocation",
+    "clobbers": [
+      "navigator.geolocation"
+    ]
+  },
+  {
+    "id": "cordova-plugin-geolocation.PositionError",
+    "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+    "pluginId": "cordova-plugin-geolocation",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-nativegeocoder.NativeGeocoder",
+    "file": "plugins/cordova-plugin-nativegeocoder/www/NativeGeocoder.js",
+    "pluginId": "cordova-plugin-nativegeocoder",
+    "clobbers": [
+      "nativegeocoder"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -296,7 +318,9 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-file": "6.0.2",
   "cordova-plugin-advanced-http": "2.2.0",
-  "cordova-sqlite-storage": "3.4.0"
+  "cordova-sqlite-storage": "3.4.0",
+  "cordova-plugin-geolocation": "4.0.2",
+  "cordova-plugin-nativegeocoder": "3.2.2"
 };
 // BOTTOM OF METADATA
 });

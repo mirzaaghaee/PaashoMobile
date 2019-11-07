@@ -12,6 +12,8 @@ import {
 // Modals
 import { SearchFilterPage } from '../../pages/modal/search-filter/search-filter.page';
 import { ImagePage } from './../modal/image/image.page';
+import { EventdetailPage } from './../modal/eventdetail/eventdetail.page';
+
 // Call notifications test by Popover and Custom Component.
 import { NotificationsComponent } from './../../components/notifications/notifications.component';
 import { ApiService } from '../../services/api.service';
@@ -176,7 +178,14 @@ export class HomeResultsPage {
     });
     return await modal.present();
   }
+ async showEventDetail(eventitem: PaashoEvent){
+  const modal = await this.modalCtrl.create({
+    component: EventdetailPage,
+    componentProps: { item: eventitem }
+  });
+  return await modal.present();
 
+ }
   async notifications(ev: any) {
     const popover = await this.popoverCtrl.create({
       component: NotificationsComponent,

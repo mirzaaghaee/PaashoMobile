@@ -113,7 +113,7 @@ export class ApiService {
     }
 
     getEventListPagination(eventtype: eventType, page: number, size: number): Observable<PaashoEvent[]> {
-        console.log('page:'+page);
+        console.log('page:' + page);
         return this.http
             .get<PaashoEvent[]>(this.base_path + apiPath.getEvents + '?type=' + eventtype + '&page=' + page + '&size=' + size
             + '&sort=desc')
@@ -124,7 +124,7 @@ export class ApiService {
     }
 
     getEventDetail(code: string): Observable<DetailEvent> {
-        return this.http.get<DetailEvent>(this.base_path + apiPath.event + '/' + code + '/detail').pipe(
+        return this.http.get<DetailEvent>(this.base_path + apiPath.eventDetail + '/' + code + '/detail').pipe(
             retry(2),
             catchError(this.handleError)
         );

@@ -7,6 +7,5 @@
   "description": "Paasho",
   "author": "Ionic Theme",
   "icons": [],
-  "start_url": "index.html",
-  "theme_color": "#2f32a0"
+  "start_url": "index.html"
 }

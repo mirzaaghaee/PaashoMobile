@@ -49,6 +49,12 @@
     <feature name="SQLitePlugin">
         <param name="ios-package" value="SQLitePlugin" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="NativeGeocoder">
+        <param name="ios-package" value="NativeGeocoder" />
+    </feature>
     <name>Paasho</name>
     <description>Paasho</description>
     <author email="firminoata@gmail.com" href="https://Paasho.com">Ionic Theme</author>

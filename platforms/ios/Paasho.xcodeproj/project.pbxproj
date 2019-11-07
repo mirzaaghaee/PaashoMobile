@@ -59,6 +59,9 @@
 		4958CF6C92A24E1ABBAF7BEF /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C9B6A592454FFEB519EC16 /* SQLitePlugin.m */; };
 		284284DF726B433DB35D747B /* PSPDFThreadSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E8194CCF594A6CB654D8A7 /* PSPDFThreadSafeMutableDictionary.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		C904AD0A8E154BD5B6FF7FCF /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = 4901D960A5C04026A266B1B3 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-w -DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_SYNCHRONOUS=3 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_TEMP_STORE=2 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE -DSQLITE_DEFAULT_PAGE_SIZE=4096"; }; };
+		86D458388D1C48D0A44C4FE7 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5044EED492B4012A2DFDC16 /* CDVLocation.m */; };
+		087C86AB7F684D4A8B42E1D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0F8103B94C434CB34FFCCB /* CoreLocation.framework */; };
+		3A2B817489324E4E81CDD97D /* NativeGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED710D535D74C61970008D9 /* NativeGeocoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +187,11 @@
 		92946A9F88B0488DB64C479D /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		810B83356AAE4BD89A405872 /* PSPDFThreadSafeMutableDictionary.h */ = {isa = PBXFileReference; name = "PSPDFThreadSafeMutableDictionary.h"; path = "cordova-sqlite-storage/PSPDFThreadSafeMutableDictionary.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		87F260A4B9544E0D80D19DDD /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D5044EED492B4012A2DFDC16 /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		806755D2B4A040868A1C0DB9 /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		FC0F8103B94C434CB34FFCCB /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		1ED710D535D74C61970008D9 /* NativeGeocoder.swift */ = {isa = PBXFileReference; name = "NativeGeocoder.swift"; path = "cordova-plugin-nativegeocoder/NativeGeocoder.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		B5C83F5812704EBFBE8E3B4C /* NativeGeocoder-Bridging-Header.h */ = {isa = PBXFileReference; name = "NativeGeocoder-Bridging-Header.h"; path = "cordova-plugin-nativegeocoder/NativeGeocoder-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +204,7 @@
 				016C0900A8274BE196C1A2EA /* SystemConfiguration.framework in Frameworks */,
 				B74DC352B8B644468B644538 /* WebKit.framework in Frameworks */,
 				378AB57A4E8D4F89B12CBA70 /* libz.tbd in Frameworks */,
+				087C86AB7F684D4A8B42E1D3 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +279,7 @@
 				EF2E65AFF5BD4A0B8ED0C0C8 /* SystemConfiguration.framework */,
 				023BDBBBDF454F8F91FB5E4C /* WebKit.framework */,
 				42D8F72B209D4507B1640506 /* libz.tbd */,
+				FC0F8103B94C434CB34FFCCB /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,6 +386,10 @@
 				92946A9F88B0488DB64C479D /* SQLitePlugin.h */,
 				810B83356AAE4BD89A405872 /* PSPDFThreadSafeMutableDictionary.h */,
 				87F260A4B9544E0D80D19DDD /* sqlite3.h */,
+				D5044EED492B4012A2DFDC16 /* CDVLocation.m */,
+				806755D2B4A040868A1C0DB9 /* CDVLocation.h */,
+				1ED710D535D74C61970008D9 /* NativeGeocoder.swift */,
+				B5C83F5812704EBFBE8E3B4C /* NativeGeocoder-Bridging-Header.h */,
 			);
 			name = Plugins;
 			path = "Paasho/Plugins";
@@ -527,6 +541,8 @@
 				4958CF6C92A24E1ABBAF7BEF /* SQLitePlugin.m in Sources */,
 				284284DF726B433DB35D747B /* PSPDFThreadSafeMutableDictionary.m in Sources */,
 				C904AD0A8E154BD5B6FF7FCF /* sqlite3.c in Resources */,
+				86D458388D1C48D0A44C4FE7 /* CDVLocation.m in Sources */,
+				3A2B817489324E4E81CDD97D /* NativeGeocoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +578,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				PRODUCT_NAME = "Paasho";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -584,6 +604,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				PRODUCT_NAME = "Paasho";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -610,6 +633,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -635,6 +662,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

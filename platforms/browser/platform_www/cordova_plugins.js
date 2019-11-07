@@ -305,6 +305,14 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-nativegeocoder/www/NativeGeocoder.js",
+        "id": "cordova-plugin-nativegeocoder.NativeGeocoder",
+        "pluginId": "cordova-plugin-nativegeocoder",
+        "clobbers": [
+            "nativegeocoder"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -318,7 +326,9 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-advanced-http": "2.2.0",
-    "cordova-sqlite-storage": "3.4.0"
+    "cordova-sqlite-storage": "3.4.0",
+    "cordova-plugin-geolocation": "4.0.2",
+    "cordova-plugin-nativegeocoder": "3.2.2"
 }
 // BOTTOM OF METADATA
 });

@@ -1,6 +1,8 @@
 export enum apiPath {
     getAllCategories = '/api/categories',
     event = '/api/events' ,
+    eventDetail = '/api/v1/events' ,
+
     getMapEvents = '/api/events/map' ,
     getAllMapEvents = '/api/events/map-all' ,
     getEvents = '/api/v2/home/events',

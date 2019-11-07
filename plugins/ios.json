@@ -30,10 +30,20 @@
     },
     "cordova-sqlite-storage": {
       "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-nativegeocoder": {
+      "LOCATION_WHEN_IN_USE_DESCRIPTION": "Use geocoder service",
+      "PACKAGE_NAME": "com.Paasho"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-add-swift-support": {
       "PACKAGE_NAME": "com.Paasho"
     }
   }

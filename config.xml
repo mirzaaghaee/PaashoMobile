@@ -104,4 +104,10 @@
     <plugin name="cordova-plugin-advanced-http" spec="^2.2.0" />
     <engine name="ios" spec="~4.5.5" />
     <plugin name="cordova-sqlite-storage" spec="^3.4.0" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.2">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Paasho Location Service" />
+    </plugin>
+    <plugin name="cordova-plugin-nativegeocoder" spec="^3.2.2">
+        <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="Use geocoder service" />
+    </plugin>
 </widget>
