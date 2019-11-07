@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders, HttpEvent, HttpErrorResponse, HttpResponse, HttpHeaderResponse} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams, HttpEvent, HttpErrorResponse, HttpResponse, HttpHeaderResponse} from '@angular/common/http';
 import {Category} from '../models/Category';
 import {Observable, throwError} from 'rxjs';
 import {retry, catchError, map} from 'rxjs/operators';
@@ -15,11 +15,12 @@ import {Title} from '../models/Title';
 import {MapEvent} from '../models/MapEvent';
 import {Participant} from '../models/Participant';
 import {Share} from '../models/Share';
+import { promise } from 'protractor';
 
 const httpOptions = {
     headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-    }),
+        'Content-Type': 'image/jpeg',
+    })
 };
 
 @Injectable({
@@ -57,6 +58,9 @@ export class ApiService {
         // return an observable with a user-facing error message
         return throwError(
             'Something bad happened; please try again later.');
+    }
+    getImageUrl(id: number): string {
+        return this.base_path + apiPath.downloadImage + '?id=' + id;
     }
 
     // Create a new item
@@ -109,8 +113,10 @@ export class ApiService {
     }
 
     getEventListPagination(eventtype: eventType, page: number, size: number): Observable<PaashoEvent[]> {
+        console.log('page:'+page);
         return this.http
-            .get<PaashoEvent[]>(this.base_path + apiPath.getEvents + '?type=' + eventtype + '&page=' + page + ' &size=' + size)
+            .get<PaashoEvent[]>(this.base_path + apiPath.getEvents + '?type=' + eventtype + '&page=' + page + '&size=' + size
+            + '&sort=desc')
             .pipe(
                 retry(2),
                 catchError(this.handleError)
@@ -176,10 +182,6 @@ export class ApiService {
             );
     }
 
-    confirmMobile2(mobile: Mobile) {
-        return this.http
-            .post(this.base_path + apiPath.confirmMobile, JSON.stringify(mobile));
-    }
 
     getComments(eventCode: string): Observable<Comment[]> {
         return this.http.get<Comment[]>(this.base_path + apiPath.comment + eventCode).pipe(
@@ -250,11 +252,12 @@ export class ApiService {
             catchError(this.handleError)
         );
     }
-    downloadEventImage(id: number): Observable<Blob> {
-        return this.http.get<Blob>(this.base_path + apiPath.downloadImage + '?id=' + id).pipe(
-            retry(2),
-            catchError(this.handleError)
-        );
+     async downloadEventImage(id: number): Promise<Blob> {
+
+         const params = new HttpParams().set('id', id.toString());    // now it has aaa
+        console.log(params);
+         return  await this.http.get<Blob>( this.base_path + apiPath.downloadImage + '?id=' + id , httpOptions
+         ).toPromise();
     }
 
     // Update item by id

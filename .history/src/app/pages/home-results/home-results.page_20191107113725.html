@@ -84,21 +84,22 @@
                 </ion-card-header>
                 <ion-img [src]="item.imageSrc"></ion-img>
                 <ion-button expand="full" color="dark" (click)="presentImage(themeCover)" no-margin>
-                    شرکت در رویداد
+                    Modal 1: Modal Image
                 </ion-button>
-                <ion-button shape="round" expand="full" fill="outline" size="small" color="primary" (click)="alertLocation()">
-                    موقعیت مکانی
+                <ion-button shape="round" fill="outline" size="small" color="primary" (click)="alertLocation()">
+                    Location
                     <ion-icon name="locate"></ion-icon>
                 </ion-button>
-
                 <ion-item>
                     <ion-badge slot="start">{{item.view}}</ion-badge>
-                    <ion-icon slot="start" name="eye"></ion-icon>
-
-                    <ion-badge slot="end">{{item.date}}</ion-badge>
+                    <ion-icon name="eye"></ion-icon>
+                    <ion-badge slot="end">22</ion-badge>
                 </ion-item>
 
             </ion-card>
+            <ion-footer>
+
+            </ion-footer>
         </ion-item>
     </ion-list>
     <ion-infinite-scroll threshold="10%" (ionInfinite)="loadData($event)">

@@ -17,6 +17,8 @@ import { NotificationsComponent } from './../../components/notifications/notific
 import { ApiService } from '../../services/api.service';
 import { eventType } from '../../services/eventType';
 import {PaashoEvent} from '../../models/PaashoEvent';
+import {jsonpCallbackContext} from '@angular/common/http/src/module';
+
 
 
 
@@ -35,6 +37,9 @@ export class HomeResultsPage {
   eventtype: eventType;
   page: number;
   size: number;
+  base64data: any;
+  converted_image: any;
+  imagePath: string;
 
 
   constructor(
@@ -48,9 +53,10 @@ export class HomeResultsPage {
   ) {
     this.eventList = [];
     this.eventListPagination = [];
-    this.eventtype = eventType.TODAY;
-    this.page = 1;
-    this.size = 3;
+    this.eventtype = eventType.POPULAR;
+    this.page = 0;
+    this.size = 2;
+    this.imagePath = '';
 
 
   }
@@ -66,7 +72,7 @@ export class HomeResultsPage {
 
   }
   changeFilter(eventtype: eventType) {
-    this.page = 1;
+    this.page = 0;
     this.eventList = [];
     this.eventListPagination = [];
     this.eventtype = eventtype;
@@ -76,7 +82,8 @@ export class HomeResultsPage {
   getAllEvents() {
     this.apiService.getAllEvents().subscribe((response: PaashoEvent[]) => {
       console.log(response);
-      for (let i = 0; i < response.length; i++) { 
+      for (let i = 0; i < response.length; i++) {
+        response[i].imageSrc = this.apiService.getImageUrl(response[i].pic) ;
         this.eventListPagination.push(response[i]);
       }
     });
@@ -85,6 +92,7 @@ export class HomeResultsPage {
     this.apiService.getEventListPagination(eventtype, this.page, this.size).subscribe((response: PaashoEvent[]) => {
       console.log(response);
       for (let i = 0; i < response.length; i++) {
+        response[i].imageSrc = this.apiService.getImageUrl(response[i].pic) ;
         this.eventListPagination.push(response[i]);
       }
     });
@@ -114,9 +122,9 @@ export class HomeResultsPage {
     this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
   }
 
-
   async alertLocation() {
     const changeLocation = await this.alertCtrl.create({
+
       header: 'Change Location',
       message: 'Type your Address.',
       inputs: [

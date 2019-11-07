@@ -12,4 +12,5 @@ export interface PaashoEvent {
     time:       string;
     title:      string;
     view:       number;
+    imageSrc:    string;
 }

@@ -39,6 +39,7 @@ import {
       request = request.clone({
         headers: request.headers.set('Accept', 'application/json')
       });
+      console.log('request is sent!');
       this.showLoader();
       return next.handle(request).pipe(
         map((event: HttpEvent<any>) => {
