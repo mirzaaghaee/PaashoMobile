@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button size="small" shape="round" (click)="closeModal()" color="tertiary">
+                <ion-icon slot="start" name="close"></ion-icon> Close
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="bg-white">
+        <ion-card-header>
+            <ion-label>{{item.title}}</ion-label>
+            <ion-item>
+                <ion-avatar slot="start">
+                    <ion-img src="./assets/img/useravatar.jpg"></ion-img>
+                </ion-avatar>
+                <ion-label>{{eventDetail.creator}}</ion-label>
+
+            </ion-item>
+            <ion-item>
+                <ion-label slot="start">دسته بندی: {{eventDetail.category}}</ion-label>
+                <ion-icon name="pricetag"></ion-icon>
+                <ion-label>{{eventDetail.pricing}}</ion-label>
+
+            </ion-item>
+        </ion-card-header>
+        <ion-img [src]="item.imageSrc"></ion-img>
+        <ion-label>{{eventDetail.description}}</ion-label>
+
+        <ion-button expand="full" color="dark" no-margin>
+            شرکت در رویداد
+        </ion-button>
+
+        <ion-item>
+            <ionic4-star-rating #rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#488aff" defaultColor="#f4f4f4" readonly="true" [rating]="eventDetail.score" fontSize="12px" (ratingChanged)="logRatingChange($event)">
+            </ionic4-star-rating>
+            <ion-badge slot="start">{{item.view}}</ion-badge>
+            <ion-icon slot="start" name="eye"></ion-icon>
+            <ion-badge slot="end">{{item.time}}</ion-badge>
+
+            <ion-badge slot="end">{{item.date}}</ion-badge>
+        </ion-item>
+    </ion-card>
+</ion-content>

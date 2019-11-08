@@ -57,7 +57,7 @@ export class HomeResultsPage {
     this.eventListPagination = [];
     this.eventtype = eventType.POPULAR;
     this.page = 0;
-    this.size = 2;
+    this.size = 5;
     this.imagePath = '';
 
 

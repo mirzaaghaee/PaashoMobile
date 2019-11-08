@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button size="small" shape="round" (click)="closeModal()" color="tertiary">
+                <ion-icon slot="start" name="close"></ion-icon> Close
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="bg-white">
+        <ion-card-header>
+            <ion-item>
+                <ion-label>{{item.title}}</ion-label>
+
+            </ion-item>
+        </ion-card-header>
+        <ion-img [src]="item.imageSrc"></ion-img>
+        <ion-item>
+            <ion-label slot="start">{{eventDetail.category}}</ion-label>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar slot="start">
+                <ion-img src="./assets/img/useravatar.jpg"></ion-img>
+            </ion-avatar>
+            <ion-label>{{eventDetail.creator}}</ion-label>
+            <ionic4-star-rating slot="end" #rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#488aff" defaultColor="#f4f4f4" readonly="true" [rating]="eventDetail.score" fontSize="12px" (ratingChanged)="logRatingChange($event)">
+            </ionic4-star-rating>
+
+        </ion-item>
+        <ion-button expand="full" color="dark" no-margin>
+            شرکت در رویداد
+        </ion-button>
+        <ion-item>
+            <ion-tabs>
+                <ion-tab-bar slot="top">
+                    <ion-tab-button tab="sharing">
+                        <ion-icon name="share"></ion-icon>
+                        <ion-label>اشتراک گذاری</ion-label>
+                    </ion-tab-button>
+
+                    <ion-tab-button tab="description">
+                        <ion-icon name="map"></ion-icon>
+                        <ion-label>توضیحات</ion-label>
+                    </ion-tab-button>
+
+                    <ion-tab-button tab="comments">
+                        <ion-icon name="information-circle"></ion-icon>
+                        <ion-label>نظرات</ion-label>
+                    </ion-tab-button>
+                </ion-tab-bar>
+            </ion-tabs>
+
+        </ion-item>
+
+
+
+        <ion-label class="ion-text-wrap">{{eventDetail.description}}</ion-label>
+
+        <ion-item>
+            <ion-icon slot="end" name="pricetag"></ion-icon>
+            <ion-label slot="end">{{eventDetail.pricing}}</ion-label>
+
+        </ion-item>
+        <ion-item>
+            <ion-badge slot="start">{{item.time}}</ion-badge>
+            <ion-badge slot="end">{{item.date}}</ion-badge>
+            <ion-badge slot="start">{{item.view}}</ion-badge>
+            <ion-icon slot="start" name="eye"></ion-icon>
+
+        </ion-item>
+    </ion-card>
+</ion-content>
