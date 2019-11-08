@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-row>
+        <ion-col text-start padding-top>
+            <ion-title>موقعیت </ion-title>
+        </ion-col>
+        <ion-col>
+            <ion-button (click)="loadMap()" shape="round" fill="outline">
+                <ion-icon slot="start" name="locate"></ion-icon>
+                من کجام؟
+            </ion-button>
+        </ion-col>
+        <ion-col text-end>
+            <ion-button (click)="closemap()" shape="round" fill="outline">
+                <ion-icon slot="end" name="close"></ion-icon>
+                بازگشت
+            </ion-button>
+        </ion-col>
+
+    </ion-row>
+</ion-header>
+<ion-content>
+
+    <div class="map-wrapper">
+        <div id="map_center">
+            <img src="../../assets/img/1.png" />
+        </div>
+        <div #map id="map"></div>
+    </div>
+    <div id="address">
+        <span>{{address}}</span>
+    </div>
+
+
+</ion-content>

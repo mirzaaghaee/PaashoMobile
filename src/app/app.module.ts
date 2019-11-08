@@ -14,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Modal Pages
 import { ImagePageModule } from './pages/modal/image/image.module';
-import {EventdetailPageModule} from './pages/modal/eventdetail/eventdetail.module'
+import {EventdetailPageModule} from './pages/modal/eventdetail/eventdetail.module';
 import { SearchFilterPageModule } from './pages/modal/search-filter/search-filter.module';
 
 // Components
@@ -23,8 +23,11 @@ import { HttpConfigInterceptor } from './httpConfig.interceptor';
 import {AuthGuardService} from './services/auth-guard.service';
 import { AuthenticationService } from './services/Authentication.service';
 import { IonicStorageModule } from '@ionic/storage';
+
+//  Google Map
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+
 
 
 @NgModule({

@@ -41,24 +41,24 @@
     </ion-item>
 
     <ion-item>
-        <ion-button shape="round" fill="outline" (click)="TabsChange('description')">
+        <ion-button shape="round" fill="outline">
             <ion-icon name="map"></ion-icon>
             <ion-label>توضیحات</ion-label>
         </ion-button>
-        <ion-button shape="round" fill="outline" (click)="TabsChange('map')">
+        <ion-button shape="round" fill="outline">
             <ion-icon name="map"></ion-icon>
             <ion-label>موقعیت</ion-label>
         </ion-button>
-        <ion-button shape="round" fill="outline" (click)="TabsChange('share')">
+        <ion-button shape="round" fill="outline">
             <ion-icon name="share"></ion-icon>
             <ion-label>اشتراک گذاری</ion-label>
         </ion-button>
-        <ion-button shape="round" fill="outline" (click)="TabsChange('comment')">
+        <ion-button shape="round" fill="outline">
             <ion-icon name="information-circle"></ion-icon>
             <ion-label>نظرات</ion-label>
         </ion-button>
     </ion-item>
-    <ion-item name="description" *ngIf="description">
+    <ion-item name="" *ngIf="false">
         <ion-card>
             <ion-card-content>
                 <ion-item>
@@ -101,57 +101,7 @@
 
 
     </ion-item>
-    <ion-item name="map" *ngIf="map">
-        <ion-card>
-            <ion-card-header>
-                <ion-label>
-                    موقعیت مکانی
-                </ion-label>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-                    <ion-label slot="start">آدرس:</ion-label>
-                    <ion-label slot="start">{{eventDetail.address}}</ion-label>
-                </ion-item>
-                <ion-item>
-
-                </ion-item>
-
-            </ion-card-content>
-        </ion-card>
-
-
-    </ion-item>
-    <ion-item name="share" *ngIf="share">
-        <ion-card>
-            <ion-card-header>
-                <ion-label>
-                    اشتراک گذاری
-                </ion-label>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-
-                </ion-item>
-
-            </ion-card-content>
-        </ion-card>
-
-    </ion-item>
-    <ion-item name="comment" *ngIf="comment">
-        <ion-card>
-            <ion-card-header>
-                <ion-label>
-                    نظرات
-                </ion-label>
-            </ion-card-header>
-            <ion-card-content>
-                <ion-item>
-
-                </ion-item>
-
-            </ion-card-content>
-        </ion-card>
+    <ion-item>
 
     </ion-item>
 

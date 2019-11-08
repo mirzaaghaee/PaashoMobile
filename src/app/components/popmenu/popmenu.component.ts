@@ -13,7 +13,27 @@ export class PopmenuComponent implements OnInit {
 
   ngOnInit() {
   }
+  routeToPage(event) {
+    switch (event) {
+      case 'home': {
+        this.navCtrl.navigateForward('home-results');
+        break;
+      }
+      case 'map': {
+        this.navCtrl.navigateForward('maphome');
+        break;
+      }
+      case 'profile': {
+        this.navCtrl.navigateForward('edit-profile');
+        break;
+     }
+     default: {
+      this.navCtrl.navigateForward('home-results');
+      break;
+      }
+   }
 
+  }
   togglePopupMenu() {
     return this.openMenu = !this.openMenu;
   }

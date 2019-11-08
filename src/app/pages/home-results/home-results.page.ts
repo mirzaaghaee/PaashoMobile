@@ -32,7 +32,7 @@ import {jsonpCallbackContext} from '@angular/common/http/src/module';
 export class HomeResultsPage {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
   searchKey = '';
-  yourLocation = '123 Test Street';
+  yourLocation = 'Angry Monkey';
   themeCover = 'assets/img/ionic4-Start-Theme-cover.jpg';
   eventList: PaashoEvent[];
   eventListPagination: PaashoEvent[];
