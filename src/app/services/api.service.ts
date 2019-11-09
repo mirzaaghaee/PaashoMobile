@@ -167,7 +167,7 @@ export class ApiService {
 
     sendMobileNumber(mobile: Mobile): Observable<string> {
         return this.http
-            .post<string>(this.base_path + apiPath.postOTP, JSON.stringify(mobile), httpOptions)
+            .post<string>(this.base_path + apiPath.postOTP, mobile)
             .pipe(
                 retry(2),
                 catchError(this.handleError)
