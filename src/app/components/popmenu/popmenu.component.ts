@@ -16,7 +16,7 @@ export class PopmenuComponent implements OnInit {
   routeToPage(event) {
     switch (event) {
       case 'home': {
-        this.navCtrl.navigateForward('home-results');
+        this.navCtrl.navigateRoot('home-results');
         break;
       }
       case 'map': {

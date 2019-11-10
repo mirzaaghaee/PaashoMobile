@@ -66,17 +66,12 @@ export class HomeResultsPage {
   list: any[];
 
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit() {
-    this.getFilteredEvents(this.eventtype);
-
-  }
-  ionViewWillEnter() {
-    console.log(eventType.TODAY.toString());
-    console.log('ionViewWillEnter');
     this.menuCtrl.enable(true);
-    // this.getFilteredEvents(eventType.WEEK);
-    this.list = [1, 100, 334, 343, 34, 34, 343, 23423, 23423, 23423];
-
+    this.getFilteredEvents(this.eventtype);
+}
+  ionViewWillEnter() {
   }
   changeFilter(eventtype: eventType) {
     this.page = 0;

@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'invitefriends', loadChildren: './pages/invitefriends/invitefriends.module#InvitefriendsPageModule' ,
   canActivate: [AuthGuardService] },
   { path: 'adnewevent', loadChildren: './pages/addnewevent/addnewevent.module#AddneweventPageModule', canActivate: [AuthGuardService]  },
+  { path: 'notification', loadChildren: './pages/notification/notification.module#NotificationPageModule' },
 ];
 
 @NgModule({

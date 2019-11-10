@@ -39,6 +39,12 @@ export class AppComponent {
         icon: 'contacts'
       },
       {
+        title: 'پیامهای من',
+        url: '/notification',
+        direct: 'forward',
+        icon: 'notifications'
+      },
+      {
         title: 'رویداد جدید',
         url: '/adnewevent',
         direct: 'forward',
