@@ -42,7 +42,7 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
     HttpClientModule,
     ImagePageModule,
     SearchFilterPageModule,
-    EventdetailPageModule
+    EventdetailPageModule,
 
   ],
   entryComponents: [NotificationsComponent ],

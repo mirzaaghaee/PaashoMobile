@@ -41,10 +41,10 @@ export class MaphomePage implements OnInit {
   closemap() {
     this.navCtrl.back();
   }
-  loadMap() {
+/*   loadMap() {
     this.geolocation.getCurrentPosition().then((resp) => {
-      let latLng = new google.maps.LatLng(resp.coords.latitude, resp.coords.longitude);
-      let mapOptions = {
+      const latLng = new google.maps.LatLng(resp.coords.latitude, resp.coords.longitude);
+      const mapOptions = {
         center: latLng,
         zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -66,7 +66,7 @@ export class MaphomePage implements OnInit {
 
   getAddressFromCoords(lattitude, longitude) {
     console.log('getAddressFromCoords ' + lattitude + ' ' + longitude);
-    let options: NativeGeocoderOptions = {
+    const options: NativeGeocoderOptions = {
       useLocale: true,
       maxResults: 5
     };
@@ -74,7 +74,7 @@ export class MaphomePage implements OnInit {
     this.nativeGeocoder.reverseGeocode(lattitude, longitude, options)
       .then((result: NativeGeocoderReverseResult[]) => {
         this.address = '';
-        let responseAddress = [];
+        const responseAddress = [];
         for (let [key, value] of Object.entries(result[0])) {
           if (value.length > 0)
             responseAddress.push(value);
@@ -91,5 +91,5 @@ export class MaphomePage implements OnInit {
       });
 
   }
-
+ */
 }

@@ -27,29 +27,59 @@ export class AppComponent {
   ) {
     this.appPages = [
       {
-        title: 'Home',
+        title: 'صفحه اصلی',
         url: '/home-results',
         direct: 'root',
         icon: 'home'
       },
       {
-        title: 'About',
-        url: '/about',
+        title: 'رویدادهای من',
+        url: '/myevents',
         direct: 'forward',
-        icon: 'information-circle-outline'
+        icon: 'contacts'
+      },
+      {
+        title: 'رویداد جدید',
+        url: '/adnewevent',
+        direct: 'forward',
+        icon: 'add-circle'
+      },
+      {
+        title: 'گفتگوها',
+        url: '/chat',
+        direct: 'root',
+        icon: 'chatboxes'
+      },
+      {
+        title: 'دعوت از دوستان',
+        url: '/invitefriends',
+        direct: 'forward',
+        icon: 'share'
+      },
+      {
+        title: 'جایزه هفته',
+        url: '/gift',
+        direct: 'forward',
+        icon: 'gift'
       },
 
       {
-        title: 'App Settings',
+        title: 'تماس با ما',
+        url: '/about',
+        direct: 'forward',
+        icon: 'call'
+      },
+
+      {
+        title: 'پروفایل',
         url: '/settings',
         direct: 'forward',
-        icon: 'cog'
+        icon: 'contact'
       }
     ];
 
     this.initializeApp();
   }
-  
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
@@ -66,6 +96,7 @@ export class AppComponent {
 
   goToEditProgile() {
     this.navCtrl.navigateForward('edit-profile');
+
   }
 
   logout() {

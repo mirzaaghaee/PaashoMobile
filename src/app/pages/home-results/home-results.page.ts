@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild , OnInit } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
 import {
   NavController,
@@ -64,13 +64,18 @@ export class HomeResultsPage {
   }
 
   list: any[];
+
+
+  ngOnInit() {
+    this.getFilteredEvents(this.eventtype);
+
+  }
   ionViewWillEnter() {
     console.log(eventType.TODAY.toString());
     console.log('ionViewWillEnter');
     this.menuCtrl.enable(true);
     // this.getFilteredEvents(eventType.WEEK);
     this.list = [1, 100, 334, 343, 34, 34, 343, 23423, 23423, 23423];
-    this.getFilteredEvents(this.eventtype);
 
   }
   changeFilter(eventtype: eventType) {
