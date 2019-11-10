@@ -84,11 +84,11 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.authenticationService.authState.subscribe(state => {
-        if (state) {
-          this.router.navigate(['home-results']);
-        } else {
-          this.router.navigate(['login']);
-        }
+        // if (state) {
+          // this.router.navigate(['home-results']);
+        // } else {
+          this.router.navigate(['maphome']);
+        // }
       });
       this.splashScreen.hide();
     }).catch(() => {});

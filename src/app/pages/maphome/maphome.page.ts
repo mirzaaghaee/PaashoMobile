@@ -15,7 +15,7 @@ import { eventType } from '../../services/eventType';
 import {PaashoEvent} from '../../models/PaashoEvent';
 
 
-
+declare var google;
 @Component({
   selector: 'app-maphome',
   templateUrl: './maphome.page.html',
