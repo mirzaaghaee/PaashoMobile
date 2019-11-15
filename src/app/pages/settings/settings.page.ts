@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import {Profile} from '../../models/Profile';
+import {ApiService} from '../../services/api.service';
 
 @Component({
   selector: 'app-settings',
@@ -13,14 +15,21 @@ export class SettingsPage implements OnInit {
   currency: any;
   enablePromo: any;
   enableHistory: any;
+  userProfile: any = [];
 
   languages: any = ['English', 'Portuguese', 'French'];
   paymentMethods: any = ['Paypal', 'Credit Card'];
   currencies: any = ['USD', 'BRL', 'EUR'];
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController ,
+              private apiservice: ApiService
+    ) { }
 
   ngOnInit() {
+     this.apiservice.getProfile().subscribe((response) => {
+      this.userProfile = response;
+     }
+      );
   }
 
   editProfile() {

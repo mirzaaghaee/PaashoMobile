@@ -313,6 +313,84 @@ module.exports = [
         "clobbers": [
             "nativegeocoder"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-crop/www/crop.js",
+        "id": "cordova-plugin-crop.CropPlugin",
+        "pluginId": "cordova-plugin-crop",
+        "clobbers": [
+            "plugins.crop"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+        "id": "cordova-plugin-camera.Camera",
+        "pluginId": "cordova-plugin-camera",
+        "clobbers": [
+            "Camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+        "id": "cordova-plugin-camera.CameraPopoverOptions",
+        "pluginId": "cordova-plugin-camera",
+        "clobbers": [
+            "CameraPopoverOptions"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/Camera.js",
+        "id": "cordova-plugin-camera.camera",
+        "pluginId": "cordova-plugin-camera",
+        "clobbers": [
+            "navigator.camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/src/browser/CameraProxy.js",
+        "id": "cordova-plugin-camera.CameraProxy",
+        "pluginId": "cordova-plugin-camera",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+        "id": "cordova-plugin-file-transfer.FileTransferError",
+        "pluginId": "cordova-plugin-file-transfer",
+        "clobbers": [
+            "window.FileTransferError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+        "id": "cordova-plugin-file-transfer.FileTransfer",
+        "pluginId": "cordova-plugin-file-transfer",
+        "clobbers": [
+            "window.FileTransfer"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-file-transfer/www/browser/FileTransfer.js",
+        "id": "cordova-plugin-file-transfer.BrowserFileTransfer",
+        "pluginId": "cordova-plugin-file-transfer",
+        "clobbers": [
+            "window.FileTransfer"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-telerik-imagepicker/www/imagepicker.js",
+        "id": "cordova-plugin-telerik-imagepicker.ImagePicker",
+        "pluginId": "cordova-plugin-telerik-imagepicker",
+        "clobbers": [
+            "plugins.imagePicker"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-filepicker/www/FilePicker.js",
+        "id": "cordova-plugin-filepicker.FilePicker",
+        "pluginId": "cordova-plugin-filepicker",
+        "clobbers": [
+            "FilePicker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -328,7 +406,12 @@ module.exports.metadata =
     "cordova-plugin-advanced-http": "2.2.0",
     "cordova-sqlite-storage": "3.4.0",
     "cordova-plugin-geolocation": "4.0.2",
-    "cordova-plugin-nativegeocoder": "3.2.2"
+    "cordova-plugin-nativegeocoder": "3.2.2",
+    "cordova-plugin-crop": "0.3.1",
+    "cordova-plugin-camera": "4.1.0",
+    "cordova-plugin-file-transfer": "1.7.1",
+    "cordova-plugin-telerik-imagepicker": "2.3.3",
+    "cordova-plugin-filepicker": "1.1.6"
 }
 // BOTTOM OF METADATA
 });

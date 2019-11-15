@@ -41,7 +41,7 @@ export class MaphomePage implements OnInit {
   closemap() {
     this.navCtrl.back();
   }
-/*   loadMap() {
+   loadMap() {
     this.geolocation.getCurrentPosition().then((resp) => {
       const latLng = new google.maps.LatLng(resp.coords.latitude, resp.coords.longitude);
       const mapOptions = {
@@ -76,8 +76,9 @@ export class MaphomePage implements OnInit {
         this.address = '';
         const responseAddress = [];
         for (let [key, value] of Object.entries(result[0])) {
-          if (value.length > 0)
+          if ((value.length > 0)) {
             responseAddress.push(value);
+          }
 
         }
         responseAddress.reverse();
@@ -91,5 +92,5 @@ export class MaphomePage implements OnInit {
       });
 
   }
- */
+ 
 }

@@ -36,11 +36,25 @@
     },
     "cordova-plugin-nativegeocoder": {
       "PACKAGE_NAME": "com.Paasho"
-    }
-  },
-  "dependent_plugins": {
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.ionictheme.ionic4start"
+    },
+    "cordova-plugin-telerik-imagepicker": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-filepicker": {
+      "PACKAGE_NAME": "com.Paasho"
     }
-  }
+  },
+  "dependent_plugins": {}
 }

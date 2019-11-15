@@ -37,12 +37,28 @@
     "cordova-plugin-nativegeocoder": {
       "LOCATION_WHEN_IN_USE_DESCRIPTION": "Use geocoder service",
       "PACKAGE_NAME": "com.Paasho"
-    }
-  },
-  "dependent_plugins": {
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.Paasho"
     },
+    "cordova-plugin-telerik-imagepicker": {
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-filepicker": {
+      "PACKAGE_NAME": "com.Paasho"
+    }
+  },
+  "dependent_plugins": {
     "cordova-plugin-add-swift-support": {
       "PACKAGE_NAME": "com.Paasho"
     }

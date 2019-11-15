@@ -252,7 +252,15 @@ export class ApiService {
             catchError(this.handleError)
         );
     }
-     async downloadEventImage(id: number): Promise<Blob> {
+    uploadImage(image: ImageData): Observable<any> {
+        return this.http.post<any>(this.base_path + apiPath.changeAvatar, image).pipe(
+            retry(2),
+            catchError(this.handleError)
+        );
+    }
+
+
+    async downloadEventImage(id: number): Promise<Blob> {
 
          const params = new HttpParams().set('id', id.toString());    // now it has aaa
         console.log(params);

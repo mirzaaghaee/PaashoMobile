@@ -28,6 +28,13 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
+import { Crop } from '@ionic-native/crop/ngx';
+import {File} from '@ionic-native/file/ngx';
+import {FileTransfer} from '@ionic-native/file-transfer/ngx';
+
+
 
 
 @NgModule({
@@ -58,7 +65,12 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
       provide: HTTP_INTERCEPTORS,
       useClass: HttpConfigInterceptor,
       multi: true
-    }
+    },
+    ImagePicker,
+    Camera ,
+    Crop ,
+    File ,
+    FileTransfer
   ],
   bootstrap: [AppComponent]
 })

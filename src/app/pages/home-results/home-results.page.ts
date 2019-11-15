@@ -9,6 +9,7 @@ import {
   ModalController
 } from '@ionic/angular';
 
+
 // Modals
 import { SearchFilterPage } from '../../pages/modal/search-filter/search-filter.page';
 import { ImagePage } from './../modal/image/image.page';
@@ -72,13 +73,27 @@ export class HomeResultsPage {
     this.getFilteredEvents(this.eventtype);
 }
   ionViewWillEnter() {
+    console.log('home page enterance');
   }
-  changeFilter(eventtype: eventType) {
+  changeFilter(eventtype: string) {
     this.page = 0;
     this.eventList = [];
     this.eventListPagination = [];
-    this.eventtype = eventtype;
-    this.getFilteredEvents(eventtype);
+    switch (eventtype) {
+      case 'TODAY':
+          this.eventtype = eventType.TODAY;
+        break;
+        case 'WEEK':
+            this.eventtype = eventType.WEEK;
+            break;
+          case 'POPULAR':
+              this.eventtype = eventType.POPULAR;
+              break;
+      default:
+          this.eventtype = eventType.TODAY;
+        break;
+    }
+    this.getFilteredEvents(this.eventtype);
   }
 
   getAllEvents() {

@@ -1,0 +1,100 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>ویرایش اطلاعات کاربر</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile">
+    <!--     <ion-card>
+        <img *ngIf="!fileUrl" src="assets/img/avatar.jpeg" />
+        <img *ngIf="fileUrl" src="{{fileUrl}}" />
+        <ion-card-content>
+            <ion-button color="medium" size="large" (click)="cropUpload()">
+                <ion-icon slot="icon-only" name="camera"></ion-icon>
+            </ion-button>
+        </ion-card-content>
+    </ion-card>
+ -->
+    <ion-card no-margin>
+        <ion-card-content class="bg-profile">
+            <img src="assets/img/avatar.jpeg">
+            <h1 class="fw500">{{this.userProfile.firstName}}</h1>
+            <h2 color="light" margin-bottom>{{this.userProfile.lastName}}</h2>
+
+            <ion-fab horizontal="center" vertical="center" slot="fixed">
+                <ion-fab-button color="light">
+                    <ion-icon name="camera"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-list side="top">
+                    <ion-fab-button color="dark">
+                        <ion-icon name="camera"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab-list>
+                <ion-fab-list side="bottom">
+                    <ion-fab-button color="secondary">
+                        <ion-icon name="images"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab-list>
+                <ion-fab-list side="end">
+                    <ion-fab-button color="light">
+                        <ion-icon name="contacts"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab-list>
+            </ion-fab>
+
+        </ion-card-content>
+        <form #heroForm="ngForm">
+            <ion-grid fixed no-padding>
+                <ion-row>
+                    <ion-col size="12" padding>
+
+                        <ion-list margin-bottom>
+                            <ion-list-header color="light">
+                                <ion-label class="fw700">اطلاعات کاربر</ion-label>
+                            </ion-list-header>
+
+                            <ion-item>
+                                <ion-label color="dark" position="stacked">نام:</ion-label>
+                                <ion-input name="firstname" inputmode="text" placeholder="نام کوچک" [(ngModel)]="userProfile.firstName"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label color="dark" position="stacked">نام خانوادگی:</ion-label>
+                                <ion-input name="family" inputmode="text" placeholder="فامیل" [(ngModel)]="userProfile.lastName"></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label color="dark" position="stacked">ایمیل:</ion-label>
+                                <ion-input name="email" inputmode="email" placeholder="Ex.: msh@gmail.com" [(ngModel)]="this.userProfile.email"></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label color="dark" position="stacked">اینستاگرام:</ion-label>
+                                <ion-input name="instagram" inputmode="text" placeholder="اینستاگرام" [(ngModel)]="this.userProfile.instagram"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label color="dark" position="stacked">اینستاگرام:</ion-label>
+                                <ion-input name="telegram" inputmode="text" placeholder="تلگرام" [(ngModel)]="userProfile.telegram"></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label color="dark" position="stacked">سال تولد:</ion-label>
+                                <ion-input name="birthday" inputmode="number" placeholder="سال تولد" [(ngModel)]="userProfile.birthday"></ion-input>
+                            </ion-item>
+
+
+                        </ion-list>
+
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </form>
+        <ion-button size="large" expand="full" color="dark" (click)="saveUserProfile()" no-margin>ثبت اطلاعات</ion-button>
+    </ion-card>
+
+    <div padding>
+        <ion-text color="dark" no-margin>
+        </ion-text>
+    </div>
+</ion-content>
