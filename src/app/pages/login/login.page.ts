@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, MenuController, ToastController, AlertController, LoadingController } from '@ionic/angular';
 import {ApiService} from '../../services/api.service';
 import {Mobile} from '../../models/Mobile';
+import {Profile} from '../../models/Profile';
 import { HttpResponse, HttpHeaderResponse, HttpEvent } from '@angular/common/http';
 import { HTTPResponse } from '@ionic-native/http/ngx';
 import { map } from 'rxjs/operators';
@@ -17,7 +18,8 @@ import {AuthenticationService} from '../../services/Authentication.service';
 export class LoginPage implements OnInit {
   public onLoginForm: FormGroup;
   public activateCode: boolean;
-  public mobile: Mobile = {mobile : '09350719980' , code : '', token: ''};
+  private userProfile: Profile ;
+  public mobile: Mobile = {mobile : '' , code : '', token: '' , profile: this.userProfile};
   public token: string;
 
   constructor(
@@ -116,8 +118,11 @@ export class LoginPage implements OnInit {
       if (response === 200 ) {
         console.log('token:' + this.mobile);
         this.mobile.token = localStorage.getItem('token');
-        this.authenticationService.login(this.mobile);
-        console.log('token:' + this.token);
+        this.apiservice.getProfile().subscribe( responseprofile => {
+          this.mobile.profile = responseprofile;
+          this.authenticationService.login(this.mobile);
+          console.log('token:' + this.token);
+        });
       }
 
     });

@@ -21,6 +21,7 @@ import { ApiService } from '../../services/api.service';
 import { eventType } from '../../services/eventType';
 import {PaashoEvent} from '../../models/PaashoEvent';
 import {jsonpCallbackContext} from '@angular/common/http/src/module';
+import {AuthenticationService} from '../../services/Authentication.service';
 
 
 
@@ -52,7 +53,8 @@ export class HomeResultsPage {
     public alertCtrl: AlertController,
     public modalCtrl: ModalController,
     public toastCtrl: ToastController,
-    public apiService: ApiService
+    public apiService: ApiService,
+    private authService: AuthenticationService
   ) {
     this.eventList = [];
     this.eventListPagination = [];
@@ -71,6 +73,9 @@ export class HomeResultsPage {
   ngOnInit() {
     this.menuCtrl.enable(true);
     this.getFilteredEvents(this.eventtype);
+    this.authService.getUser().then(res => {
+      console.log(res.profile.email);
+    });
 }
   ionViewWillEnter() {
     console.log('home page enterance');

@@ -3,6 +3,7 @@ import {FormsModule } from '@angular/forms';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
 import {Profile} from '../../models/Profile';
 import {ApiService} from '../../services/api.service';
+import {AuthenticationService} from '../../services/Authentication.service';
 
 import { Crop } from '@ionic-native/crop/ngx';
 
@@ -24,7 +25,8 @@ export class EditProfilePage implements OnInit {
     private imagePicker: ImagePicker,
     private crop: Crop,
     private transfer: FileTransfer,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private authService: AuthenticationService
     ) { }
     fileUrl: any = null;
     respData: any;
