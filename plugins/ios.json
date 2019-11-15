@@ -37,6 +37,11 @@
     "cordova-plugin-nativegeocoder": {
       "LOCATION_WHEN_IN_USE_DESCRIPTION": "Use geocoder service",
       "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
+      "PACKAGE_NAME": "com.Paasho"
     }
   },
   "dependent_plugins": {
@@ -44,6 +49,9 @@
       "PACKAGE_NAME": "com.Paasho"
     },
     "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "es6-promise-plugin": {
       "PACKAGE_NAME": "com.Paasho"
     }
   }

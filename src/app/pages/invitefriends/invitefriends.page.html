@@ -20,11 +20,11 @@
 <ion-content padding>
 
 <div  padding-horizontal text-center>
-  <!--<ion-button [buttonType]="apiService">share</ion-button>-->
-    <form   class="list-form" >
+    <ion-button onclick="window.plugins.socialsharing.share('Message only')">share</ion-button>
+    <form class="list-form" >
         <ion-item>
-            <!--<ion-label>kode davat ro bezan jaize begir</ion-label>-->
-            <ion-input color="secondary" max=11 [(ngModel)]="code" type="string" formControlName="codeShare"></ion-input>
+            <ion-label>kode davat ro bezan jaize begir</ion-label>
+            <ion-input color="secondary" max=11 [(ngModel)]="code" type="string" name="codeShare"></ion-input>
 
         </ion-item>
         <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="invitedFriend()" tappable>

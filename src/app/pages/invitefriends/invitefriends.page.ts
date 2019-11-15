@@ -45,6 +45,7 @@ export class InvitefriendsPage implements OnInit {
 
   }
   invitedFriend() {
+      console.log(this.code)
     this.apiService.inviteFriend(this.code).subscribe(response => {
       console.log(response);
     });

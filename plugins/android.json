@@ -38,11 +38,18 @@
     },
     "cordova-plugin-nativegeocoder": {
       "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.Paasho"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.ionictheme.ionic4start"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.Paasho"
     }
   }
 }
