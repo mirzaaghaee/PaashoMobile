@@ -16,6 +16,7 @@ import {MapEvent} from '../models/MapEvent';
 import {Participant} from '../models/Participant';
 import {Share} from '../models/Share';
 import { promise } from 'protractor';
+import {MyEvent} from '../models/MyEvent';
 
 const httpOptions = {
     headers: new HttpHeaders({
@@ -259,7 +260,15 @@ export class ApiService {
          return  await this.http.get<Blob>( this.base_path + apiPath.downloadImage + '?id=' + id , httpOptions
          ).toPromise();
     }
-
+    getMyEventPagination( page: number, size: number): Observable<MyEvent[]> {
+        return this.http
+            .get<MyEvent[]>(this.base_path + apiPath.getEvents + '?page=' + page + '&size=' + size
+                + '&sort=desc')
+            .pipe(
+                retry(2),
+                catchError(this.handleError)
+            );
+    }
     // Update item by id
     /* updateItem(id, item): Observable<Student> {
       return this.http
