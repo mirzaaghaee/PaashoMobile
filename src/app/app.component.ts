@@ -116,7 +116,6 @@ export class AppComponent {
     this.navCtrl.navigateForward('edit-profile');
 
   }
-
   logout() {
     this.navCtrl.navigateRoot('/');
   }

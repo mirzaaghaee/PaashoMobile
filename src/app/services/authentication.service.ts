@@ -14,7 +14,6 @@ export class AuthenticationService {
     private router: Router,
     private storage: Storage,
     private platform: Platform,
-    
     public toastController: ToastController
   ) {
     this.platform.ready().then(() => {
