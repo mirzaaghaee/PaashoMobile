@@ -93,7 +93,7 @@ export class AppComponent {
         // if (state) {
           // this.router.navigate(['home-results']);
         // } else {
-          this.router.navigate(['maphome']);
+          this.router.navigate(['invitefriends']);
         // }
       });
       this.splashScreen.hide();

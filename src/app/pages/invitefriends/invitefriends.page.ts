@@ -11,6 +11,7 @@ import { NotificationsComponent } from './../../components/notifications/notific
 import { ApiService } from '../../services/api.service';
 import { eventType } from '../../services/eventType';
 import {PaashoEvent} from '../../models/PaashoEvent';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-invitefriends',
@@ -18,6 +19,8 @@ import {PaashoEvent} from '../../models/PaashoEvent';
   styleUrls: ['./invitefriends.page.scss'],
 })
 export class InvitefriendsPage implements OnInit {
+  public code: string;
+
 
   constructor(
 
@@ -29,7 +32,8 @@ export class InvitefriendsPage implements OnInit {
     public toastCtrl: ToastController,
     public apiService: ApiService
 
-  ) { }
+
+) { }
   ionViewWillEnter() {
     console.log(eventType.TODAY.toString());
     console.log('ionViewWillEnter');
@@ -38,6 +42,12 @@ export class InvitefriendsPage implements OnInit {
   }
 
   ngOnInit() {
+
+  }
+  invitedFriend() {
+    this.apiService.inviteFriend(this.code).subscribe(response => {
+      console.log(response);
+    });
   }
 
 
