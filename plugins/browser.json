@@ -37,6 +37,7 @@
     "cordova-plugin-nativegeocoder": {
       "PACKAGE_NAME": "com.Paasho"
     },
+<<<<<<< HEAD
     "cordova-plugin-crop": {
       "PACKAGE_NAME": "com.Paasho"
     },
@@ -58,3 +59,18 @@
   },
   "dependent_plugins": {}
 }
+=======
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.Paasho"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.ionictheme.ionic4start"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.Paasho"
+    }
+  }
+}
+>>>>>>> 159c0636944e5fe8c521e82275e80d795ab5a41c
