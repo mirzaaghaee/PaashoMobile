@@ -73,10 +73,7 @@ export class HomeResultsPage {
   ngOnInit() {
     this.menuCtrl.enable(true);
     this.getFilteredEvents(this.eventtype);
-    this.authService.getUser().then(res => {
-      console.log(res.profile.email);
-    }
-       );
+      console.log(this.authService.getUserInfo().profile.email);
 }
   ionViewWillEnter() {
     console.log('home page enterance');

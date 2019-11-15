@@ -34,8 +34,14 @@ export class AuthenticationService {
     });
   }
 
+  public getUserInfo(): Mobile {
+    let user: Mobile;
+    this.getUser().then((res: Mobile) => {
+      return  user = res; });
+      return user;
+  }
 
-  public async getUser(): Promise<Mobile> {
+  private async getUser(): Promise<Mobile> {
       this.userInfo = await this.storage.get('USER_INFO');
       return this.userInfo;
   }
