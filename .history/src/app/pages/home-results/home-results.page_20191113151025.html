@@ -1,0 +1,116 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button color="secondary"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <ion-text color="light">
+                <ion-text color="light" class="fw700">Paasho</ion-text>
+            </ion-text>
+        </ion-title>
+    </ion-toolbar>
+    <ion-toolbar color="dark">
+        <ion-searchbar [(ngModel)]="searchKey"></ion-searchbar>
+        <ion-buttons slot="end">
+            <ion-button size="small" shape="round" color="medium" (click)="searchFilter()">
+                <ion-icon name="options"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="changeFilter('TODAY')">
+                <ion-label>امروز</ion-label>
+                <ion-icon name="trending-up"></ion-icon>
+            </ion-button>
+
+        </ion-buttons>
+        <ion-title>
+            <ion-buttons>
+                <ion-button (click)="changeFilter('WEEK')">
+                    <ion-label>این هفته</ion-label>
+                    <ion-icon name="pulse"></ion-icon>
+                </ion-button>
+
+            </ion-buttons>
+        </ion-title>
+
+        <ion-buttons slot="end" (click)="changeFilter('POPULAR')">
+            <ion-button>
+                <ion-label>پربازدید</ion-label>
+
+                <ion-icon name="star"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+
+
+
+</ion-header>
+<!-- <div class="scrollmenu" color="dark">
+    <ion-button *ngFor="let item of  list">
+        <div class="card card-1">
+            <img src="../../../assets/img/Lerning100.jpg">
+            <p style="font-size: 9px;">{{item}}</p>
+        </div>
+
+    </ion-button>
+</div>
+ -->
+<!--     <ion-button shape="round" fill="outline" size="small" color="primary" (click)="alertLocation()">
+        <ion-icon name="locate"></ion-icon>
+        <ion-item *ngFor="let item of  list">
+            <ion-thumbnail slot="start">
+                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            </ion-thumbnail>
+            <ion-label>{{item}}</ion-label>
+        </ion-item>
+
+    </ion-button>
+ -->
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of eventListPagination">
+            <ion-card class="bg-white">
+                <ion-card-header>
+                    <ion-label>{{item.title}}</ion-label>
+                </ion-card-header>
+                <ion-img [src]="item.imageSrc"></ion-img>
+                <ion-button expand="full" color="dark" (click)="showEventDetail(item)" no-margin>
+                    مشاهده جزییات
+                </ion-button>
+                <!--                 <ion-button shape="round" expand="full" fill="outline" size="small" color="primary" (click)="alertLocation()">
+                    موقعیت مکانی
+                    <ion-icon name="locate"></ion-icon>
+                </ion-button>
+ -->
+                <ion-item>
+                    <ion-badge slot="start">{{item.view}}</ion-badge>
+                    <ion-icon slot="start" name="eye"></ion-icon>
+
+                    <ion-badge slot="end">{{item.date}}</ion-badge>
+                </ion-item>
+
+            </ion-card>
+        </ion-item>
+    </ion-list>
+    <ion-infinite-scroll threshold="15%" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="دریافت اطلاعات...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+
+
+
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-label>salam</ion-label>
+</ion-footer>
+<popmenu></popmenu>

@@ -9,7 +9,7 @@ import { Mobile } from '../models/Mobile';
 export class AuthenticationService {
 
   authState = new BehaviorSubject(false);
-
+  private userInfo: Mobile;
   constructor(
     private router: Router,
     private storage: Storage,
@@ -22,14 +22,22 @@ export class AuthenticationService {
   }
 
   ifLoggedIn() {
+    console.log('ifLoggedin');
     this.storage.get('USER_INFO').then((response) => {
+      console.log(response);
       if (response) {
         this.authState.next(true);
-      }
+      } else {
+      this.router.navigate(['login']);
+    }
     });
   }
 
 
+  public async getUser(): Promise<Mobile> {
+      this.userInfo = await this.storage.get('USER_INFO');
+      return this.userInfo;
+  }
   login(mobile: Mobile) {
     this.storage.set('USER_INFO', mobile).then((response) => {
       this.router.navigate(['home-results']);

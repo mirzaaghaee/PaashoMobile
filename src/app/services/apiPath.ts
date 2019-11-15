@@ -14,6 +14,7 @@ export enum apiPath {
     changeAvatar = '/api/v1/changeAvatar',
     notifications = '/api/v1/notifications/',
     profile = '/api/v1/profile',
+    downloadImage = '/api/v1/events/download' ,
     ranks = '/api/v1/ranks',
-    downloadImage = '/api/v1/events/download'
+    uploadImage = '/api/v1/changeAvatar'
   }

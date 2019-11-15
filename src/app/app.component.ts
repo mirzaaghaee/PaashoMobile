@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from './services/Authentication.service';
 
 import { Pages } from './interfaces/pages';
+import {Profile} from './models/Profile';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -16,8 +18,10 @@ import { Pages } from './interfaces/pages';
 export class AppComponent {
 
   public appPages: Array<Pages>;
+  userProfile: any = [];
 
   constructor(
+    private apiservice: ApiService,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
@@ -53,7 +57,7 @@ export class AppComponent {
       {
         title: 'گفتگوها',
         url: '/chat',
-        direct: 'root',
+        direct: 'forward',
         icon: 'chatboxes'
       },
       {
@@ -86,17 +90,25 @@ export class AppComponent {
 
     this.initializeApp();
   }
+
+  loadCurrentUser() {
+    this.apiservice.getProfile().subscribe(response => {
+        this.userProfile = response;
+    });
+
+  }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.authenticationService.authState.subscribe(state => {
-        // if (state) {
-          // this.router.navigate(['home-results']);
-        // } else {
-          this.router.navigate(['invitefriends']);
-        // }
+         if (state) {
+           this.router.navigate(['home-results']);
+         } else {
+          this.router.navigate(['login']);
+         }
       });
       this.splashScreen.hide();
+
     }).catch(() => {});
   }
 
@@ -104,7 +116,6 @@ export class AppComponent {
     this.navCtrl.navigateForward('edit-profile');
 
   }
-
   logout() {
     this.navCtrl.navigateRoot('/');
   }

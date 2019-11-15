@@ -38,6 +38,17 @@
       "LOCATION_WHEN_IN_USE_DESCRIPTION": "Use geocoder service",
       "PACKAGE_NAME": "com.Paasho"
     },
+<<<<<<< HEAD
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.Paasho"
+    },
+=======
     "cordova-plugin-x-socialsharing": {
       "PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
       "PHOTO_LIBRARY_USAGE_DESCRIPTION": "This app requires photo library access to function properly.",
@@ -45,9 +56,19 @@
     }
   },
   "dependent_plugins": {
+>>>>>>> 159c0636944e5fe8c521e82275e80d795ab5a41c
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.Paasho"
     },
+    "cordova-plugin-telerik-imagepicker": {
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.Paasho"
+    },
+    "cordova-plugin-filepicker": {
+      "PACKAGE_NAME": "com.Paasho"
+    }
+  },
+  "dependent_plugins": {
     "cordova-plugin-add-swift-support": {
       "PACKAGE_NAME": "com.Paasho"
     },

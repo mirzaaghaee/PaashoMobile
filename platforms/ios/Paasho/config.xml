@@ -55,6 +55,21 @@
     <feature name="NativeGeocoder">
         <param name="ios-package" value="NativeGeocoder" />
     </feature>
+    <feature name="CropPlugin">
+        <param name="ios-package" value="CTCrop" />
+    </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="ios-package" value="CDVFileTransfer" />
+    </feature>
+    <feature name="ImagePicker">
+        <param name="ios-package" value="SOSPicker" />
+    </feature>
+    <feature name="FilePicker">
+        <param name="ios-package" value="FilePicker" />
+    </feature>
     <name>Paasho</name>
     <description>Paasho</description>
     <author email="firminoata@gmail.com" href="https://Paasho.com">Ionic Theme</author>
@@ -134,6 +149,7 @@
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="CameraUsesGeolocation" value="false" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="SplashMaintainAspectRatio" value="true" />

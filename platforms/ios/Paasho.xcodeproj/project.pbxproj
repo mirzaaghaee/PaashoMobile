@@ -62,6 +62,49 @@
 		86D458388D1C48D0A44C4FE7 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5044EED492B4012A2DFDC16 /* CDVLocation.m */; };
 		087C86AB7F684D4A8B42E1D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0F8103B94C434CB34FFCCB /* CoreLocation.framework */; };
 		3A2B817489324E4E81CDD97D /* NativeGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED710D535D74C61970008D9 /* NativeGeocoder.swift */; };
+		4D2DE99EA71943BC8E101952 /* CTCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C799891CB3D4A99BC623BE2 /* CTCrop.m */; };
+		EF50771AA6F54C00A6244C7C /* PECropRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCA918C1A146FB84BE18CA /* PECropRectView.m */; };
+		73BD9F51A2B34C6B93A8B36A /* PECropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0544B23CFBA348268E756D45 /* PECropView.m */; };
+		2CB79E85DEAB44B1921EBB4D /* PECropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C5F8CDCF194DD3A00D2FA8 /* PECropViewController.m */; };
+		BD9E0E933BB54320992B6005 /* PEResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E920D6F1D3554391AFF1B86D /* PEResizeControl.m */; };
+		DB49ECEE75114F3D8D9FD1D4 /* UIImage+PECrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D753C315A4A848992B985 /* UIImage+PECrop.m */; };
+		FC4B5AFFC2784553916742DD /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B1777257313431E96CC870F /* PEPhotoCropEditor.bundle */; };
+		E2FCF0BD51904B71BD9292BC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B35D1A2C224961B58A6128 /* QuartzCore.framework */; };
+		24C233C598634C6A9431FD7E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D4204702C94ABB9777970E /* AVFoundation.framework */; };
+		3D92FAF9D54A469CB28C941A /* UIImage+CropScaleOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2BBC32E5BD482B831344CF /* UIImage+CropScaleOrientation.m */; };
+		0FC27B0C1B2740408CF14A2F /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 62044B84A7E24FF3BC651A78 /* CDVCamera.m */; };
+		3EF2FB11F1F24B9BA1119633 /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB11AA94FDEA44A4A7CE8AD3 /* CDVJpegHeaderWriter.m */; };
+		66648169AC6B4247A00F4628 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8517CAC1134B8D83DB84C4 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		26EA3C5841EF4FA6BBB9133E /* CDVFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF8C7FC0C14D679627E19C /* CDVFileTransfer.m */; };
+		64C052199998424A80CB8F5C /* SOSPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E1993AD494674E0FA9A9D608 /* SOSPicker.m */; };
+		535D544D69894CEFBE744490 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CB5E41DC374E509A3E3906 /* UIImage+fixOrientation.m */; };
+		902155015F864CDFA5BE2EF0 /* GMAlbumsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB413D01913842D7A2E230AB /* GMAlbumsViewCell.m */; };
+		0DAF29B671AC4D88BE6CA909 /* GMAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678A1F359A214AF692F0D39C /* GMAlbumsViewController.m */; };
+		9EE396F3777745A99B30145E /* GMFetchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EB21D24FFB4EC082F97376 /* GMFetchItem.m */; };
+		8FABA4C5AC644C5EBDB03880 /* GMGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0C95A4C87344DEA2E51DA4 /* GMGridViewCell.m */; };
+		5524DD498F1E453693D89875 /* GMGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432C6E8E60C48C5B6F0AF09 /* GMGridViewController.m */; };
+		3E547F65C326434BB4A932E5 /* GMImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD67CEE0CD36401DBAF48DE2 /* GMImagePickerController.m */; };
+		CD209EA11F3A45A2896BF1FA /* PSYBlockTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E9306958F644E7A73D8778 /* PSYBlockTimer.m */; };
+		A9BCB03E50CE4EF6ACAD0D0D /* GMPHAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A66119EF52412E9C08B1C0 /* GMPHAsset.m */; };
+		6856B541B24F4206BFA603B1 /* GMEmptyFolder@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C99EFD61D8E495399737FDF /* GMEmptyFolder@1x.png */; };
+		A036D49D3FBE48CAAF3D8B86 /* GMEmptyFolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7089627409D4CA9BF660A0A /* GMEmptyFolder@2x.png */; };
+		A5E2ED2136AA40AAA544783B /* GMSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D5E3FB6AD047328F9D5A84 /* GMSelected.png */; };
+		813EC45ED2A54EA490309AA3 /* GMSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D2398C03BD1452B9D01B577 /* GMSelected@2x.png */; };
+		671A39D90D1C48E89F19237F /* GMVideoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A1885606BCB4E4BAC5641EA /* GMVideoIcon.png */; };
+		1B001E3707D2453EB9ABD0F6 /* GMVideoIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 281DF681A75B468EAEB174DB /* GMVideoIcon@2x.png */; };
+		2311070ADF8F4C4E9A0AD971 /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8B94B607411D4C568B97319A /* ca.lproj */; };
+		F316E416413C4110AE8551D3 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3496E54DCAA64D908CD1931B /* de.lproj */; };
+		AED24DFA5492483C921DBB74 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6408B94AD3114AED8408105B /* en.lproj */; };
+		527E9BE5D5E84E4FB25B1612 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A2738B39FCDD4C8C9DECE088 /* es.lproj */; };
+		F6330BD081C54D278DA135F0 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 33A2235CB302411DAB695197 /* fr.lproj */; };
+		FBBA48B520B2479ABD20F49F /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = DE0DEF9E15B041B6BFB558DE /* it.lproj */; };
+		AB802133A1A84256B6AB6015 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3FEEE830520E474CB46975CF /* pt.lproj */; };
+		B0459A04359243E9B6F78764 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F9210D587FD84063BF58B4B1 /* pl.lproj */; };
+		C5DF539D4ABC4A5FBC22E50D /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 88B6BD206C32459BBFCA3C6E /* zh-Hans.lproj */; };
+		9A95736D7BB341D59CF3AFFE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BA6C7C23A04F74BF874759 /* Accelerate.framework */; };
+		111FC0C04AC64E9292828C70 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB90559D1D7437B93C70929 /* Photos.framework */; };
+		13E1E57EBF6D4E12A3C1FBC1 /* FilePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 22788C068FD54536822D47FA /* FilePicker.m */; };
+		38EA43664C79455BAFB048C0 /* Paasho.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F3F2DD8E8C484EE9A5527183 /* Paasho.entitlements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +235,71 @@
 		FC0F8103B94C434CB34FFCCB /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		1ED710D535D74C61970008D9 /* NativeGeocoder.swift */ = {isa = PBXFileReference; name = "NativeGeocoder.swift"; path = "cordova-plugin-nativegeocoder/NativeGeocoder.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
 		B5C83F5812704EBFBE8E3B4C /* NativeGeocoder-Bridging-Header.h */ = {isa = PBXFileReference; name = "NativeGeocoder-Bridging-Header.h"; path = "cordova-plugin-nativegeocoder/NativeGeocoder-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3C799891CB3D4A99BC623BE2 /* CTCrop.m */ = {isa = PBXFileReference; name = "CTCrop.m"; path = "cordova-plugin-crop/CTCrop.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		75FCA918C1A146FB84BE18CA /* PECropRectView.m */ = {isa = PBXFileReference; name = "PECropRectView.m"; path = "cordova-plugin-crop/PECropRectView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0544B23CFBA348268E756D45 /* PECropView.m */ = {isa = PBXFileReference; name = "PECropView.m"; path = "cordova-plugin-crop/PECropView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B2C5F8CDCF194DD3A00D2FA8 /* PECropViewController.m */ = {isa = PBXFileReference; name = "PECropViewController.m"; path = "cordova-plugin-crop/PECropViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E920D6F1D3554391AFF1B86D /* PEResizeControl.m */ = {isa = PBXFileReference; name = "PEResizeControl.m"; path = "cordova-plugin-crop/PEResizeControl.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		433D753C315A4A848992B985 /* UIImage+PECrop.m */ = {isa = PBXFileReference; name = "UIImage+PECrop.m"; path = "cordova-plugin-crop/UIImage+PECrop.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C0AB3643D65B4727A2676D9B /* CTCrop.h */ = {isa = PBXFileReference; name = "CTCrop.h"; path = "cordova-plugin-crop/CTCrop.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		5950CC413BE1438D879CB52C /* PECropRectView.h */ = {isa = PBXFileReference; name = "PECropRectView.h"; path = "cordova-plugin-crop/PECropRectView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		7FA2EE24408A4B29AFC5C599 /* PECropView.h */ = {isa = PBXFileReference; name = "PECropView.h"; path = "cordova-plugin-crop/PECropView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		9A275171D3E349A8BB3EDBC4 /* PECropViewController.h */ = {isa = PBXFileReference; name = "PECropViewController.h"; path = "cordova-plugin-crop/PECropViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		099F5BF7D3B34B5592DA3FAF /* PEResizeControl.h */ = {isa = PBXFileReference; name = "PEResizeControl.h"; path = "cordova-plugin-crop/PEResizeControl.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		36B993A44A99413DB2721514 /* UIImage+PECrop.h */ = {isa = PBXFileReference; name = "UIImage+PECrop.h"; path = "cordova-plugin-crop/UIImage+PECrop.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6B1777257313431E96CC870F /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; name = "PEPhotoCropEditor.bundle"; path = "PEPhotoCropEditor.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		33B35D1A2C224961B58A6128 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		94D4204702C94ABB9777970E /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		FD2BBC32E5BD482B831344CF /* UIImage+CropScaleOrientation.m */ = {isa = PBXFileReference; name = "UIImage+CropScaleOrientation.m"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		62044B84A7E24FF3BC651A78 /* CDVCamera.m */ = {isa = PBXFileReference; name = "CDVCamera.m"; path = "cordova-plugin-camera/CDVCamera.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		CB11AA94FDEA44A4A7CE8AD3 /* CDVJpegHeaderWriter.m */ = {isa = PBXFileReference; name = "CDVJpegHeaderWriter.m"; path = "cordova-plugin-camera/CDVJpegHeaderWriter.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0321201382D84F388F26055E /* UIImage+CropScaleOrientation.h */ = {isa = PBXFileReference; name = "UIImage+CropScaleOrientation.h"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2CDB77B347004B2A92C0D307 /* CDVCamera.h */ = {isa = PBXFileReference; name = "CDVCamera.h"; path = "cordova-plugin-camera/CDVCamera.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0CC9E8B176E44C698CA40315 /* CDVJpegHeaderWriter.h */ = {isa = PBXFileReference; name = "CDVJpegHeaderWriter.h"; path = "cordova-plugin-camera/CDVJpegHeaderWriter.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E9C3CCB7D499479EBE4F8BEA /* CDVExif.h */ = {isa = PBXFileReference; name = "CDVExif.h"; path = "cordova-plugin-camera/CDVExif.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		8D8517CAC1134B8D83DB84C4 /* ImageIO.framework */ = {isa = PBXFileReference; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		71EF8C7FC0C14D679627E19C /* CDVFileTransfer.m */ = {isa = PBXFileReference; name = "CDVFileTransfer.m"; path = "cordova-plugin-file-transfer/CDVFileTransfer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		7B989FF73401436F8E142049 /* CDVFileTransfer.h */ = {isa = PBXFileReference; name = "CDVFileTransfer.h"; path = "cordova-plugin-file-transfer/CDVFileTransfer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E1993AD494674E0FA9A9D608 /* SOSPicker.m */ = {isa = PBXFileReference; name = "SOSPicker.m"; path = "cordova-plugin-telerik-imagepicker/SOSPicker.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		95CB5E41DC374E509A3E3906 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; name = "UIImage+fixOrientation.m"; path = "cordova-plugin-telerik-imagepicker/UIImage+fixOrientation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FB413D01913842D7A2E230AB /* GMAlbumsViewCell.m */ = {isa = PBXFileReference; name = "GMAlbumsViewCell.m"; path = "cordova-plugin-telerik-imagepicker/GMAlbumsViewCell.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		678A1F359A214AF692F0D39C /* GMAlbumsViewController.m */ = {isa = PBXFileReference; name = "GMAlbumsViewController.m"; path = "cordova-plugin-telerik-imagepicker/GMAlbumsViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		61EB21D24FFB4EC082F97376 /* GMFetchItem.m */ = {isa = PBXFileReference; name = "GMFetchItem.m"; path = "cordova-plugin-telerik-imagepicker/GMFetchItem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		BA0C95A4C87344DEA2E51DA4 /* GMGridViewCell.m */ = {isa = PBXFileReference; name = "GMGridViewCell.m"; path = "cordova-plugin-telerik-imagepicker/GMGridViewCell.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8432C6E8E60C48C5B6F0AF09 /* GMGridViewController.m */ = {isa = PBXFileReference; name = "GMGridViewController.m"; path = "cordova-plugin-telerik-imagepicker/GMGridViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		AD67CEE0CD36401DBAF48DE2 /* GMImagePickerController.m */ = {isa = PBXFileReference; name = "GMImagePickerController.m"; path = "cordova-plugin-telerik-imagepicker/GMImagePickerController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		88E9306958F644E7A73D8778 /* PSYBlockTimer.m */ = {isa = PBXFileReference; name = "PSYBlockTimer.m"; path = "cordova-plugin-telerik-imagepicker/PSYBlockTimer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F9A66119EF52412E9C08B1C0 /* GMPHAsset.m */ = {isa = PBXFileReference; name = "GMPHAsset.m"; path = "cordova-plugin-telerik-imagepicker/GMPHAsset.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		74DF1AEDE5B441359AFB6952 /* SOSPicker.h */ = {isa = PBXFileReference; name = "SOSPicker.h"; path = "cordova-plugin-telerik-imagepicker/SOSPicker.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		27F762A01EAB47CB88A84FC2 /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; name = "UIImage+fixOrientation.h"; path = "cordova-plugin-telerik-imagepicker/UIImage+fixOrientation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E65BB652DBB84FCB904E8211 /* GMAlbumsViewCell.h */ = {isa = PBXFileReference; name = "GMAlbumsViewCell.h"; path = "cordova-plugin-telerik-imagepicker/GMAlbumsViewCell.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		DAFC8FA979754372A84D9947 /* GMAlbumsViewController.h */ = {isa = PBXFileReference; name = "GMAlbumsViewController.h"; path = "cordova-plugin-telerik-imagepicker/GMAlbumsViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		007F5A564DC44FBF8A9DDA3A /* GMFetchItem.h */ = {isa = PBXFileReference; name = "GMFetchItem.h"; path = "cordova-plugin-telerik-imagepicker/GMFetchItem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		BFEB422690CA4EB1BE565464 /* GMGridViewCell.h */ = {isa = PBXFileReference; name = "GMGridViewCell.h"; path = "cordova-plugin-telerik-imagepicker/GMGridViewCell.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		06071570F876426A9D93B2B4 /* GMGridViewController.h */ = {isa = PBXFileReference; name = "GMGridViewController.h"; path = "cordova-plugin-telerik-imagepicker/GMGridViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		351E9B26997143498F6FCD4C /* GMImagePickerController.h */ = {isa = PBXFileReference; name = "GMImagePickerController.h"; path = "cordova-plugin-telerik-imagepicker/GMImagePickerController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		9713EC4F3A4241CCA9349CA8 /* PSYBlockTimer.h */ = {isa = PBXFileReference; name = "PSYBlockTimer.h"; path = "cordova-plugin-telerik-imagepicker/PSYBlockTimer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		513D316BB77D417ABDC88684 /* GMPHAsset.h */ = {isa = PBXFileReference; name = "GMPHAsset.h"; path = "cordova-plugin-telerik-imagepicker/GMPHAsset.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		7C99EFD61D8E495399737FDF /* GMEmptyFolder@1x.png */ = {isa = PBXFileReference; name = "GMEmptyFolder@1x.png"; path = "GMEmptyFolder@1x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D7089627409D4CA9BF660A0A /* GMEmptyFolder@2x.png */ = {isa = PBXFileReference; name = "GMEmptyFolder@2x.png"; path = "GMEmptyFolder@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C4D5E3FB6AD047328F9D5A84 /* GMSelected.png */ = {isa = PBXFileReference; name = "GMSelected.png"; path = "GMSelected.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3D2398C03BD1452B9D01B577 /* GMSelected@2x.png */ = {isa = PBXFileReference; name = "GMSelected@2x.png"; path = "GMSelected@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9A1885606BCB4E4BAC5641EA /* GMVideoIcon.png */ = {isa = PBXFileReference; name = "GMVideoIcon.png"; path = "GMVideoIcon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		281DF681A75B468EAEB174DB /* GMVideoIcon@2x.png */ = {isa = PBXFileReference; name = "GMVideoIcon@2x.png"; path = "GMVideoIcon@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8B94B607411D4C568B97319A /* ca.lproj */ = {isa = PBXFileReference; name = "ca.lproj"; path = "ca.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3496E54DCAA64D908CD1931B /* de.lproj */ = {isa = PBXFileReference; name = "de.lproj"; path = "de.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6408B94AD3114AED8408105B /* en.lproj */ = {isa = PBXFileReference; name = "en.lproj"; path = "en.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A2738B39FCDD4C8C9DECE088 /* es.lproj */ = {isa = PBXFileReference; name = "es.lproj"; path = "es.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		33A2235CB302411DAB695197 /* fr.lproj */ = {isa = PBXFileReference; name = "fr.lproj"; path = "fr.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE0DEF9E15B041B6BFB558DE /* it.lproj */ = {isa = PBXFileReference; name = "it.lproj"; path = "it.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3FEEE830520E474CB46975CF /* pt.lproj */ = {isa = PBXFileReference; name = "pt.lproj"; path = "pt.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9210D587FD84063BF58B4B1 /* pl.lproj */ = {isa = PBXFileReference; name = "pl.lproj"; path = "pl.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		88B6BD206C32459BBFCA3C6E /* zh-Hans.lproj */ = {isa = PBXFileReference; name = "zh-Hans.lproj"; path = "zh-Hans.lproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A2BA6C7C23A04F74BF874759 /* Accelerate.framework */ = {isa = PBXFileReference; name = "Accelerate.framework"; path = "System/Library/Frameworks/Accelerate.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		FCB90559D1D7437B93C70929 /* Photos.framework */ = {isa = PBXFileReference; name = "Photos.framework"; path = "System/Library/Frameworks/Photos.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		22788C068FD54536822D47FA /* FilePicker.m */ = {isa = PBXFileReference; name = "FilePicker.m"; path = "cordova-plugin-filepicker/FilePicker.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0A6F323CA19A4F938A29D44F /* FilePicker.h */ = {isa = PBXFileReference; name = "FilePicker.h"; path = "cordova-plugin-filepicker/FilePicker.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F3F2DD8E8C484EE9A5527183 /* Paasho.entitlements */ = {isa = PBXFileReference; name = "Paasho.entitlements"; path = "Paasho.entitlements"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +313,11 @@
 				B74DC352B8B644468B644538 /* WebKit.framework in Frameworks */,
 				378AB57A4E8D4F89B12CBA70 /* libz.tbd in Frameworks */,
 				087C86AB7F684D4A8B42E1D3 /* CoreLocation.framework in Frameworks */,
+				E2FCF0BD51904B71BD9292BC /* QuartzCore.framework in Frameworks */,
+				24C233C598634C6A9431FD7E /* AVFoundation.framework in Frameworks */,
+				66648169AC6B4247A00F4628 /* ImageIO.framework in Frameworks */,
+				9A95736D7BB341D59CF3AFFE /* Accelerate.framework in Frameworks */,
+				111FC0C04AC64E9292828C70 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +380,23 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* Paasho-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				6B1777257313431E96CC870F /* PEPhotoCropEditor.bundle */,
+				7C99EFD61D8E495399737FDF /* GMEmptyFolder@1x.png */,
+				D7089627409D4CA9BF660A0A /* GMEmptyFolder@2x.png */,
+				C4D5E3FB6AD047328F9D5A84 /* GMSelected.png */,
+				3D2398C03BD1452B9D01B577 /* GMSelected@2x.png */,
+				9A1885606BCB4E4BAC5641EA /* GMVideoIcon.png */,
+				281DF681A75B468EAEB174DB /* GMVideoIcon@2x.png */,
+				8B94B607411D4C568B97319A /* ca.lproj */,
+				3496E54DCAA64D908CD1931B /* de.lproj */,
+				6408B94AD3114AED8408105B /* en.lproj */,
+				A2738B39FCDD4C8C9DECE088 /* es.lproj */,
+				33A2235CB302411DAB695197 /* fr.lproj */,
+				DE0DEF9E15B041B6BFB558DE /* it.lproj */,
+				3FEEE830520E474CB46975CF /* pt.lproj */,
+				F9210D587FD84063BF58B4B1 /* pl.lproj */,
+				88B6BD206C32459BBFCA3C6E /* zh-Hans.lproj */,
+				F3F2DD8E8C484EE9A5527183 /* Paasho.entitlements */,
 			);
 			name = Resources;
 			path = "Paasho/Resources";
@@ -280,6 +410,11 @@
 				023BDBBBDF454F8F91FB5E4C /* WebKit.framework */,
 				42D8F72B209D4507B1640506 /* libz.tbd */,
 				FC0F8103B94C434CB34FFCCB /* CoreLocation.framework */,
+				33B35D1A2C224961B58A6128 /* QuartzCore.framework */,
+				94D4204702C94ABB9777970E /* AVFoundation.framework */,
+				8D8517CAC1134B8D83DB84C4 /* ImageIO.framework */,
+				A2BA6C7C23A04F74BF874759 /* Accelerate.framework */,
+				FCB90559D1D7437B93C70929 /* Photos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -390,6 +525,49 @@
 				806755D2B4A040868A1C0DB9 /* CDVLocation.h */,
 				1ED710D535D74C61970008D9 /* NativeGeocoder.swift */,
 				B5C83F5812704EBFBE8E3B4C /* NativeGeocoder-Bridging-Header.h */,
+				3C799891CB3D4A99BC623BE2 /* CTCrop.m */,
+				75FCA918C1A146FB84BE18CA /* PECropRectView.m */,
+				0544B23CFBA348268E756D45 /* PECropView.m */,
+				B2C5F8CDCF194DD3A00D2FA8 /* PECropViewController.m */,
+				E920D6F1D3554391AFF1B86D /* PEResizeControl.m */,
+				433D753C315A4A848992B985 /* UIImage+PECrop.m */,
+				C0AB3643D65B4727A2676D9B /* CTCrop.h */,
+				5950CC413BE1438D879CB52C /* PECropRectView.h */,
+				7FA2EE24408A4B29AFC5C599 /* PECropView.h */,
+				9A275171D3E349A8BB3EDBC4 /* PECropViewController.h */,
+				099F5BF7D3B34B5592DA3FAF /* PEResizeControl.h */,
+				36B993A44A99413DB2721514 /* UIImage+PECrop.h */,
+				FD2BBC32E5BD482B831344CF /* UIImage+CropScaleOrientation.m */,
+				62044B84A7E24FF3BC651A78 /* CDVCamera.m */,
+				CB11AA94FDEA44A4A7CE8AD3 /* CDVJpegHeaderWriter.m */,
+				0321201382D84F388F26055E /* UIImage+CropScaleOrientation.h */,
+				2CDB77B347004B2A92C0D307 /* CDVCamera.h */,
+				0CC9E8B176E44C698CA40315 /* CDVJpegHeaderWriter.h */,
+				E9C3CCB7D499479EBE4F8BEA /* CDVExif.h */,
+				71EF8C7FC0C14D679627E19C /* CDVFileTransfer.m */,
+				7B989FF73401436F8E142049 /* CDVFileTransfer.h */,
+				E1993AD494674E0FA9A9D608 /* SOSPicker.m */,
+				95CB5E41DC374E509A3E3906 /* UIImage+fixOrientation.m */,
+				FB413D01913842D7A2E230AB /* GMAlbumsViewCell.m */,
+				678A1F359A214AF692F0D39C /* GMAlbumsViewController.m */,
+				61EB21D24FFB4EC082F97376 /* GMFetchItem.m */,
+				BA0C95A4C87344DEA2E51DA4 /* GMGridViewCell.m */,
+				8432C6E8E60C48C5B6F0AF09 /* GMGridViewController.m */,
+				AD67CEE0CD36401DBAF48DE2 /* GMImagePickerController.m */,
+				88E9306958F644E7A73D8778 /* PSYBlockTimer.m */,
+				F9A66119EF52412E9C08B1C0 /* GMPHAsset.m */,
+				74DF1AEDE5B441359AFB6952 /* SOSPicker.h */,
+				27F762A01EAB47CB88A84FC2 /* UIImage+fixOrientation.h */,
+				E65BB652DBB84FCB904E8211 /* GMAlbumsViewCell.h */,
+				DAFC8FA979754372A84D9947 /* GMAlbumsViewController.h */,
+				007F5A564DC44FBF8A9DDA3A /* GMFetchItem.h */,
+				BFEB422690CA4EB1BE565464 /* GMGridViewCell.h */,
+				06071570F876426A9D93B2B4 /* GMGridViewController.h */,
+				351E9B26997143498F6FCD4C /* GMImagePickerController.h */,
+				9713EC4F3A4241CCA9349CA8 /* PSYBlockTimer.h */,
+				513D316BB77D417ABDC88684 /* GMPHAsset.h */,
+				22788C068FD54536822D47FA /* FilePicker.m */,
+				0A6F323CA19A4F938A29D44F /* FilePicker.h */,
 			);
 			name = Plugins;
 			path = "Paasho/Plugins";
@@ -471,6 +649,23 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				FC4B5AFFC2784553916742DD /* PEPhotoCropEditor.bundle in Resources */,
+				6856B541B24F4206BFA603B1 /* GMEmptyFolder@1x.png in Resources */,
+				A036D49D3FBE48CAAF3D8B86 /* GMEmptyFolder@2x.png in Resources */,
+				A5E2ED2136AA40AAA544783B /* GMSelected.png in Resources */,
+				813EC45ED2A54EA490309AA3 /* GMSelected@2x.png in Resources */,
+				671A39D90D1C48E89F19237F /* GMVideoIcon.png in Resources */,
+				1B001E3707D2453EB9ABD0F6 /* GMVideoIcon@2x.png in Resources */,
+				2311070ADF8F4C4E9A0AD971 /* ca.lproj in Resources */,
+				F316E416413C4110AE8551D3 /* de.lproj in Resources */,
+				AED24DFA5492483C921DBB74 /* en.lproj in Resources */,
+				527E9BE5D5E84E4FB25B1612 /* es.lproj in Resources */,
+				F6330BD081C54D278DA135F0 /* fr.lproj in Resources */,
+				FBBA48B520B2479ABD20F49F /* it.lproj in Resources */,
+				AB802133A1A84256B6AB6015 /* pt.lproj in Resources */,
+				B0459A04359243E9B6F78764 /* pl.lproj in Resources */,
+				C5DF539D4ABC4A5FBC22E50D /* zh-Hans.lproj in Resources */,
+				38EA43664C79455BAFB048C0 /* Paasho.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +738,27 @@
 				C904AD0A8E154BD5B6FF7FCF /* sqlite3.c in Resources */,
 				86D458388D1C48D0A44C4FE7 /* CDVLocation.m in Sources */,
 				3A2B817489324E4E81CDD97D /* NativeGeocoder.swift in Sources */,
+				4D2DE99EA71943BC8E101952 /* CTCrop.m in Sources */,
+				EF50771AA6F54C00A6244C7C /* PECropRectView.m in Sources */,
+				73BD9F51A2B34C6B93A8B36A /* PECropView.m in Sources */,
+				2CB79E85DEAB44B1921EBB4D /* PECropViewController.m in Sources */,
+				BD9E0E933BB54320992B6005 /* PEResizeControl.m in Sources */,
+				DB49ECEE75114F3D8D9FD1D4 /* UIImage+PECrop.m in Sources */,
+				3D92FAF9D54A469CB28C941A /* UIImage+CropScaleOrientation.m in Sources */,
+				0FC27B0C1B2740408CF14A2F /* CDVCamera.m in Sources */,
+				3EF2FB11F1F24B9BA1119633 /* CDVJpegHeaderWriter.m in Sources */,
+				26EA3C5841EF4FA6BBB9133E /* CDVFileTransfer.m in Sources */,
+				64C052199998424A80CB8F5C /* SOSPicker.m in Sources */,
+				535D544D69894CEFBE744490 /* UIImage+fixOrientation.m in Sources */,
+				902155015F864CDFA5BE2EF0 /* GMAlbumsViewCell.m in Sources */,
+				0DAF29B671AC4D88BE6CA909 /* GMAlbumsViewController.m in Sources */,
+				9EE396F3777745A99B30145E /* GMFetchItem.m in Sources */,
+				8FABA4C5AC644C5EBDB03880 /* GMGridViewCell.m in Sources */,
+				5524DD498F1E453693D89875 /* GMGridViewController.m in Sources */,
+				3E547F65C326434BB4A932E5 /* GMImagePickerController.m in Sources */,
+				CD209EA11F3A45A2896BF1FA /* PSYBlockTimer.m in Sources */,
+				A9BCB03E50CE4EF6ACAD0D0D /* GMPHAsset.m in Sources */,
+				13E1E57EBF6D4E12A3C1FBC1 /* FilePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +798,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				SWIFT_VERSION = 4.0;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				CODE_SIGN_ENTITLEMENTS = "Paasho/Resources/Paasho.entitlements";
 			};
 			name = Debug;
 		};
@@ -607,6 +824,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				SWIFT_VERSION = 4.0;
+				CODE_SIGN_ENTITLEMENTS = "Paasho/Resources/Paasho.entitlements";
 			};
 			name = Release;
 		};
@@ -637,6 +855,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				SWIFT_VERSION = 4.0;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				CODE_SIGN_ENTITLEMENTS = "Paasho/Resources/Paasho.entitlements";
 			};
 			name = Debug;
 		};
@@ -665,6 +884,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				SWIFT_VERSION = 4.0;
+				CODE_SIGN_ENTITLEMENTS = "Paasho/Resources/Paasho.entitlements";
 			};
 			name = Release;
 		};

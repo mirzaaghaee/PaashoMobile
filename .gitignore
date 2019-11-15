@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+node_modules
+=======
 
 src/app/pages/home-results/home-results.page.html
 node_modules
@@ -7,3 +10,4 @@ node_modules
 .history/src/app/services/api.service_20191106155241.ts
 .history/src/app/services/api.service_20191106155241.ts
 *.ts
+>>>>>>> 159c0636944e5fe8c521e82275e80d795ab5a41c

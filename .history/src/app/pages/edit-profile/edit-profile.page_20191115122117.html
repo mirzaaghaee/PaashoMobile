@@ -1,0 +1,136 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>ویرایش اطلاعات کاربر</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile">
+    <!--     <ion-card>
+        <img *ngIf="!fileUrl" src="assets/img/avatar.jpeg" />
+        <img *ngIf="fileUrl" src="{{fileUrl}}" />
+        <ion-card-content>
+            <ion-button color="medium" size="large" (click)="cropUpload()">
+                <ion-icon slot="icon-only" name="camera"></ion-icon>
+            </ion-button>
+        </ion-card-content>
+    </ion-card>
+ -->
+    <ion-card no-margin>
+        <ion-card-content class="bg-profile">
+            <img src="assets/img/avatar.jpeg">
+            <h1 class="fw500">{{this.userProfile.firstName}}</h1>
+            <h2 color="light" margin-bottom>{{this.userProfile.lastName}}</h2>
+
+            <ion-fab horizontal="center" vertical="center" slot="fixed">
+                <ion-fab-button color="light">
+                    <ion-icon name="camera"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-list side="top">
+                    <ion-fab-button color="dark">
+                        <ion-icon name="camera"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab-list>
+                <ion-fab-list side="bottom">
+                    <ion-fab-button color="secondary">
+                        <ion-icon name="images"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab-list>
+                <ion-fab-list side="end">
+                    <ion-fab-button color="light">
+                        <ion-icon name="contacts"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab-list>
+            </ion-fab>
+
+        </ion-card-content>
+
+        <ion-grid fixed no-padding>
+            <ion-row>
+                <ion-col size="12" padding>
+
+                    <ion-list margin-bottom>
+                        <ion-list-header color="light">
+                            <ion-label class="fw700">اطلاعات کاربر</ion-label>
+                        </ion-list-header>
+
+                        <ion-item>
+                            <ion-label color="dark" position="stacked">نام:</ion-label>
+                            <ion-input inputmode="text" placeholder="نام کوچک" [(ngModel)]="this.userProfile.firstName"></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label color="dark" position="stacked">ایمیل:</ion-label>
+                            <ion-input inputmode="email" placeholder="Ex.: msh@gmail.com" [(value)]="this.userProfile.email"></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label color="dark" position="stacked">اینستاگرام:</ion-label>
+                            <ion-input inputmode="text" placeholder="آدرس" [(value)]="this.userProfile.instagram"></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label color="dark">City</ion-label>
+                            <ion-select>
+                                <ion-select-option value="nes">New York</ion-select-option>
+                                <ion-select-option value="n64">Los Angeles</ion-select-option>
+                                <ion-select-option value="ps">London</ion-select-option>
+                                <ion-select-option value="genesis">Paris</ion-select-option>
+                                <ion-select-option value="saturn">São Paulo</ion-select-option>
+                                <ion-select-option value="snes">Tokyo</ion-select-option>
+                                <ion-select-option value="snes">New Delhi</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label color="dark">State</ion-label>
+                            <ion-select>
+                                <ion-select-option value="nes">NY</ion-select-option>
+                                <ion-select-option value="n64">CA</ion-select-option>
+                                <ion-select-option value="ps">Greater London</ion-select-option>
+                                <ion-select-option value="genesis">Paris</ion-select-option>
+                                <ion-select-option value="saturn">SP</ion-select-option>
+                                <ion-select-option value="snes">Kantō</ion-select-option>
+                                <ion-select-option value="snes">Delhi</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-list>
+
+                    <ion-list>
+                        <ion-radio-group>
+                            <ion-list-header color="light">
+                                <ion-label class="fw700">User Type</ion-label>
+                            </ion-list-header>
+
+                            <ion-item>
+                                <ion-label color="primary">Customer</ion-label>
+                                <ion-radio slot="start" value="customer" checked></ion-radio>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label color="primary">Owner</ion-label>
+                                <ion-radio slot="start" value="agent"></ion-radio>
+                            </ion-item>
+                        </ion-radio-group>
+
+                        <ion-item>
+                            <ion-label class="text-1x">Checkbox test</ion-label>
+                            <ion-checkbox></ion-checkbox>
+                        </ion-item>
+                    </ion-list>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-button size="large" expand="full" color="dark" (click)="saveUserProfile()" no-margin>ثبت اطلاعات</ion-button>
+    </ion-card>
+
+    <div padding>
+        <ion-text color="dark" no-margin>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum odio placeat incidunt nesciunt atque ratione quisquam, fugit omnis maxime adipisci excepturi dignissimos aliquam asperiores itaque unde sequi? Minus, quia, dolore?
+        </ion-text>
+    </div>
+</ion-content>
